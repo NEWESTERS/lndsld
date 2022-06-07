@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"name": "✨ root",
+			"path": "."
+		},
+		{
+			"name": "📦 @lndsld/fp",
+			"path": "libs/fp"
+		},
+		{
+			"name": "📦 @lndsld/data-structures",
+			"path": "libs/data-structures"
+		},
+		{
+			"name": "📦 @lndsld/math",
+			"path": "libs/math"
+		}
+	],
+	"settings": {
+		"typescript.tsdk": "common/temp/node_modules/typescript/lib"
+	}
+}

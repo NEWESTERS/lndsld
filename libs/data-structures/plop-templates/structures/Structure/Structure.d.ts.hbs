@@ -1,0 +1,13 @@
+interface {{ pascalCase name }} {
+    // TODO: Structure declaration
+}
+
+declare namespace {{ pascalCase name }} {
+	export interface API {
+		// TODO: Structure API declaration
+	}
+}
+
+declare const {{ pascalCase name }}: {{ pascalCase name }}.API;
+
+export default {{ pascalCase name }};
