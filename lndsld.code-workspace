@@ -5,6 +5,14 @@
 			"path": "."
 		},
 		{
+			"name": "🏗 @lndsld/eslint-config",
+			"path": "configs/eslint-config"
+		},
+		{
+			"name": "🏗 @lndsld/webpack-config",
+			"path": "configs/webpack-config"
+		},
+		{
 			"name": "📦 @lndsld/fp",
 			"path": "libs/fp"
 		},
