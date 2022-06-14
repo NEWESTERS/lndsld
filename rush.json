@@ -302,7 +302,7 @@
      * The default remote. This tells "rush change" which remote to compare against if the remote URL is
      * not set or if a remote matching the provided remote URL is not found.
      */
-    // "defaultRemote": "origin"
+    "defaultRemote": "github"
   },
 
   /**
@@ -391,23 +391,28 @@
   "projects": [
     {
       "packageName": "@lndsld/eslint-config",
-      "projectFolder": "configs/eslint-config"
+      "projectFolder": "configs/eslint-config",
+      "shouldPublish": false
     },
     {
       "packageName": "@lndsld/webpack-config",
-      "projectFolder": "configs/webpack-config"
+      "projectFolder": "configs/webpack-config",
+      "shouldPublish": false
     },
     {
       "packageName": "@lndsld/fp",
-      "projectFolder": "libs/fp"
+      "projectFolder": "libs/fp",
+      "shouldPublish": true
     },
     {
       "packageName": "@lndsld/data-structures",
-      "projectFolder": "libs/data-structures"
+      "projectFolder": "libs/data-structures",
+      "shouldPublish": true
     },
     {
       "packageName": "@lndsld/math",
-      "projectFolder": "libs/math"
+      "projectFolder": "libs/math",
+      "shouldPublish": true
     }
     // {
     //   /**
