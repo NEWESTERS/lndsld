@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "lib": ["ESNext", "DOM"],
+        "module": "UMD",
+        "moduleResolution": "Node",
+        "allowJs": false,
+        "strict": true,
+    },
+    "include": ["src"],
+}

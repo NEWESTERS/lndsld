@@ -23,6 +23,10 @@
 		{
 			"name": "📦 @lndsld/math",
 			"path": "libs/math"
+		},
+		{
+			"name": "📦 @lndsld/react-hooks",
+			"path": "libs/react-hooks"
 		}
 	],
 	"settings": {

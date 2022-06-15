@@ -147,6 +147,34 @@ importers:
       webpack: 5.11.1_webpack-cli@4.3.1
       webpack-cli: 4.3.1_webpack@5.11.1
 
+  ../../libs/react-hooks:
+    specifiers:
+      '@lndsld/eslint-config': workspace:*
+      '@lndsld/webpack-config': workspace:*
+      '@microsoft/api-documenter': ~7.17.16
+      '@microsoft/api-extractor': ~7.24.1
+      '@types/react': ~18.0.12
+      eslint: ~8.12.0
+      eslint-plugin-react-hooks: ~4.6.0
+      npm-run-all: ~4.1.5
+      react: '>= 17'
+      typescript: ~4.6.2
+      webpack: ~5.11.1
+      webpack-cli: ~4.3.1
+    devDependencies:
+      '@lndsld/eslint-config': link:../../configs/eslint-config
+      '@lndsld/webpack-config': link:../../configs/webpack-config
+      '@microsoft/api-documenter': 7.17.16
+      '@microsoft/api-extractor': 7.24.2
+      '@types/react': 18.0.12
+      eslint: 8.12.0
+      eslint-plugin-react-hooks: 4.6.0_eslint@8.12.0
+      npm-run-all: 4.1.5
+      react: 18.2.0
+      typescript: 4.6.4
+      webpack: 5.11.1_webpack-cli@4.3.1
+      webpack-cli: 4.3.1_webpack@5.11.1
+
 packages:
 
   /@ampproject/remapping/2.2.0:
@@ -1947,6 +1975,22 @@ packages:
     resolution: {integrity: sha512-ymZk3LEC/fsut+/Q5qejp6R9O1rMxz3XaRHDV6kX8MrGAhOSPqVARbDi+EZvInBpw+BnCX3TD240byVkOfQsHg==}
     dev: true
 
+  /@types/prop-types/15.7.5:
+    resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
+    dev: true
+
+  /@types/react/18.0.12:
+    resolution: {integrity: sha512-duF1OTASSBQtcigUvhuiTB1Ya3OvSy+xORCiEf20H0P0lzx+/KeVsA99U5UjLXSbyo1DRJDlLKqTeM1ngosqtg==}
+    dependencies:
+      '@types/prop-types': 15.7.5
+      '@types/scheduler': 0.16.2
+      csstype: 3.1.0
+    dev: true
+
+  /@types/scheduler/0.16.2:
+    resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
+    dev: true
+
   /@types/source-list-map/0.1.2:
     resolution: {integrity: sha512-K5K+yml8LTo9bWJI/rECfIPrGgxdpeNbj+d53lwN4QjW1MCwlkhUms+gtdzigTeUyBr09+u8BwOIY3MXvHdcsA==}
     dev: false
@@ -2995,6 +3039,10 @@ packages:
       cssom: 0.3.8
     dev: true
 
+  /csstype/3.1.0:
+    resolution: {integrity: sha512-uX1KG+x9h5hIJsaKR9xHUeUraxf8IODOwq9JLNPq6BwB04a/xgpq3rcx47l5BZu5zBPlgD342tdke3Hom/nJRA==}
+    dev: true
+
   /data-urls/2.0.0:
     resolution: {integrity: sha512-X5eWTSXO/BJmpdIKCRuKUgSCgAN0OwliVK3yPKbwIWU1Tdw5BRajxlzMidvh+gwko9AfQ9zIj52pzF91Q3YAvQ==}
     engines: {node: '>=10'}
@@ -3282,6 +3330,15 @@ packages:
     dependencies:
       eslint: 8.12.0
     dev: false
+
+  /eslint-plugin-react-hooks/4.6.0_eslint@8.12.0:
+    resolution: {integrity: sha512-oFc7Itz9Qxh2x4gNHStv3BqJq54ExXmfC+a1NjAta66IAN87Wu0R/QArgIS9qKzX3dXKPI9H5crl9QchNMY9+g==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0
+    dependencies:
+      eslint: 8.12.0
+    dev: true
 
   /eslint-plugin-react/7.27.1_eslint@8.12.0:
     resolution: {integrity: sha512-meyunDjMMYeWr/4EBLTV1op3iSG3mjT/pz5gti38UzfM4OPpNc2m0t2xvKCOMU5D6FSdd34BIMFOvQbW+i8GAA==}
@@ -5190,7 +5247,6 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
-    dev: false
 
   /lower-case-first/1.0.2:
     resolution: {integrity: sha512-UuxaYakO7XeONbKrZf5FEgkantPf5DUqDayzP5VXZrtRPdH86s4kN47I8B3TW10S4QKiE3ziHNf3kRN//okHjA==}
@@ -5901,6 +5957,13 @@ packages:
 
   /react-is/17.0.2:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
+    dev: true
+
+  /react/18.2.0:
+    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      loose-envify: 1.4.0
     dev: true
 
   /read-pkg-up/7.0.1:

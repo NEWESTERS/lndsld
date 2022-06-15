@@ -392,12 +392,12 @@
     {
       "packageName": "@lndsld/eslint-config",
       "projectFolder": "configs/eslint-config",
-      "shouldPublish": false
+      "shouldPublish": true
     },
     {
       "packageName": "@lndsld/webpack-config",
       "projectFolder": "configs/webpack-config",
-      "shouldPublish": false
+      "shouldPublish": true
     },
     {
       "packageName": "@lndsld/fp",
@@ -412,6 +412,11 @@
     {
       "packageName": "@lndsld/math",
       "projectFolder": "libs/math",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@lndsld/react-hooks",
+      "projectFolder": "libs/react-hooks",
       "shouldPublish": true
     }
     // {
