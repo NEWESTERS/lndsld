@@ -8,7 +8,8 @@
 
 |  Package | Description |
 |  --- | --- |
-|  [@ts-essentials/data-structures](./data-structures.md) |  |
-|  [@ts-essentials/fp](./fp.md) |  |
-|  [@ts-essentials/math](./math.md) | A library with math utilities |
+|  [@lndsld/data-structures](./data-structures.md) |  |
+|  [@lndsld/fp](./fp.md) |  |
+|  [@lndsld/math](./math.md) | A library with math utilities |
+|  [@lndsld/react-hooks](./react-hooks.md) | Library with reusable React hooks |
 
