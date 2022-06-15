@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lndsld/fp",
+      "comment": "Update webpack config",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@lndsld/fp"
+}

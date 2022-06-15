@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lndsld/data-structures",
+      "comment": "Update webpack config",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@lndsld/data-structures"
+}

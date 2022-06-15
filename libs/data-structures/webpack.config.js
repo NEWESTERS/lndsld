@@ -1,3 +1,3 @@
-const { createWebpackConfig } = require('@lndsld/webpack-config/library');
+const { createLibraryConfig } = require('@lndsld/webpack-config');
 
-module.exports = createWebpackConfig();
+module.exports = createLibraryConfig();
