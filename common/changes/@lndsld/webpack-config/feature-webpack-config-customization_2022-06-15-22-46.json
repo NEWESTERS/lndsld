@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lndsld/webpack-config",
+      "comment": "Added webpack customization and auto resolving",
+      "type": "major"
+    }
+  ],
+  "packageName": "@lndsld/webpack-config"
+}

@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lndsld/react-hooks",
+      "comment": "Update webpack config",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@lndsld/react-hooks"
+}
