@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lndsld/math",
+      "comment": "Dependency management",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@lndsld/math"
+}

@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lndsld/webpack-config",
+      "comment": "Dependency management",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@lndsld/webpack-config"
+}

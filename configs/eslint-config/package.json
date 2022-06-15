@@ -8,12 +8,15 @@
   "dependencies": {
     "@rushstack/eslint-config": "~2.5.2",
     "@babel/eslint-parser": "~7.17.0",
-    "eslint-plugin-unicorn": "~41.0.1"
+    "eslint-plugin-unicorn": "~41.0.1",
+    "@babel/core": "~7.18.5"
   },
   "devDependencies": {
-    "eslint": "~8.12.0"
+    "eslint": "~8.12.0",
+    "typescript": "~4.6.2"
   },
   "peerDependencies": {
-    "eslint": "^8.0.0"
+    "eslint": "^8.0.0",
+    "typescript": "^4.0.0"
   }
 }
