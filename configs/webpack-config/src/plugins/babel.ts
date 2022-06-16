@@ -10,8 +10,8 @@ function createExtensionRegExp(extensions: string[]): RegExp {
 	return new RegExp(`(${extensions.map((ext) => `\\${ext}`).join('|')})$`);
 }
 
-export function applyBabel(options: ApplyBabelOptions): WebpackConfigBuilderPlugin {
-	const { customizeBabel, extensions = ['.ts', '.js'] } = options;
+export const babelPlugin: WebpackConfigBuilderPlugin<ApplyBabelOptions> = (builder) => {
+	const { customizeBabel, extensions = ['.ts', '.js'] } = builder.env;
 
 	const babelConfigBuilder = new BabelConfigBuilder();
 
@@ -23,20 +23,18 @@ export function applyBabel(options: ApplyBabelOptions): WebpackConfigBuilderPlug
 		babelConfigBuilder.customize(customizeBabel);
 	}
 
-	return (builder) => {
-		builder
-			.addRule({
-				test: createExtensionRegExp(extensions),
-				loader: require.resolve('babel-loader'),
-				options: {
-					babelrc: false,
-					...babelConfigBuilder.config
-				}
-			})
-			.merge({
-				resolve: {
-					extensions
-				}
-			});
-	};
-}
+	builder
+		.addRule({
+			test: createExtensionRegExp(extensions),
+			loader: require.resolve('babel-loader'),
+			options: {
+				babelrc: false,
+				...babelConfigBuilder.config
+			}
+		})
+		.merge({
+			resolve: {
+				extensions
+			}
+		});
+};

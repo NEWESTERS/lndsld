@@ -1,8 +1,8 @@
-export { applyExternals } from './externals';
+export { externalsPlugin } from './externals';
 export type { ApplyExternalsOptions } from './externals';
 
-export { applyBabel } from './babel';
+export { babelPlugin } from './babel';
 export type { ApplyBabelOptions } from './babel';
 
-export { applyLibraryOutput } from './libraryOutput';
+export { libraryOutputPlugin } from './libraryOutput';
 export type { ApplyLibraryOutputOptions } from './libraryOutput';

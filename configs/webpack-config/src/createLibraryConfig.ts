@@ -1,46 +1,31 @@
-import path from 'path';
 import { Configuration } from 'webpack';
 
-import {
-	applyBabel,
-	ApplyBabelOptions,
-	applyExternals,
-	ApplyExternalsOptions,
-	applyLibraryOutput,
-	ApplyLibraryOutputOptions
-} from './features';
-import { getPackageJson, WebpackConfigBuilder } from './utils';
+import { BuildEnv, BuildEnvCustomization, resolveBuildEnv } from './env';
 
-interface CreateLibraryOptions
-	extends ApplyBabelOptions,
-		Omit<ApplyExternalsOptions, 'packageJson'>,
-		Omit<ApplyLibraryOutputOptions, 'packageJson' | 'rootPath'> {
-	customizeWebpack?: Configuration | ((config: Configuration) => Configuration);
-	entryPath?: string;
-	rootPath?: string;
+import { babelPlugin, libraryOutputPlugin, externalsPlugin } from './plugins';
+import { WebpackConfigBuilder, WebpackConfigBuilderPlugin } from './utils';
+
+interface CreateLibraryOptions extends BuildEnvCustomization {
+	customizeWebpack?: WebpackConfigBuilderPlugin<BuildEnv>;
 }
 
-function createLibraryConfig(options: CreateLibraryOptions = {}): Configuration {
-	const {
-		customizeWebpack,
-		rootPath = path.resolve('.'),
-		entryPath = path.resolve(rootPath, 'src', 'index.ts')
-	} = options;
-	const packageJson = getPackageJson(path.resolve(rootPath, 'package.json'));
-	const builder = new WebpackConfigBuilder();
+function createLibraryConfig({ customizeWebpack, ...options }: CreateLibraryOptions = {}): Configuration {
+	const env = resolveBuildEnv(options);
+
+	const builder = new WebpackConfigBuilder(env);
 
 	builder
 		.merge({
-			entry: entryPath,
+			entry: env.entryPath,
 			mode: 'production',
 			devtool: 'source-map'
 		})
-		.apply(applyLibraryOutput({ ...options, packageJson, rootPath }))
-		.apply(applyBabel(options))
-		.apply(applyExternals({ packageJson }));
+		.apply(libraryOutputPlugin)
+		.apply(babelPlugin)
+		.apply(externalsPlugin);
 
 	if (customizeWebpack) {
-		builder.customize(customizeWebpack);
+		builder.apply(customizeWebpack);
 	}
 
 	return builder.config;
