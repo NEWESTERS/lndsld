@@ -23,27 +23,25 @@ function getOutputFileName(packageJson: PackageJson, rootPath: string): string |
 		: path.resolve(rootPath, 'index.js');
 }
 
-export function applyLibraryOutput(options: ApplyLibraryOutputOptions): WebpackConfigBuilderPlugin {
+export const libraryOutputPlugin: WebpackConfigBuilderPlugin<ApplyLibraryOutputOptions> = (builder) => {
 	const {
 		packageJson,
 		rootPath,
 		outputPath = getOutputPath(packageJson, rootPath),
 		outputFileName = getOutputFileName(packageJson, rootPath),
 		libraryType = 'umd'
-	} = options;
+	} = builder.env;
 
-	return (builder) => {
-		builder.merge({
-			output: {
-				path: outputPath,
-				filename: outputFileName,
-				globalObject: 'this',
-				library: {
-					name: packageJson.name,
-					type: libraryType
-				},
-				clean: true
-			}
-		});
-	};
-}
+	builder.merge({
+		output: {
+			path: outputPath,
+			filename: outputFileName,
+			globalObject: 'this',
+			library: {
+				name: packageJson.name,
+				type: libraryType
+			},
+			clean: true
+		}
+	});
+};
