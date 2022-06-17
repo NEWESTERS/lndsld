@@ -8,6 +8,7 @@
 
 |  Package | Description |
 |  --- | --- |
+|  [@lndsld/config-builders](./config-builders.md) | Builders of configs for tools such as webpack |
 |  [@lndsld/data-structures](./data-structures.md) |  |
 |  [@lndsld/fp](./fp.md) |  |
 |  [@lndsld/math](./math.md) | A library with math utilities |
