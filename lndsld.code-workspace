@@ -27,6 +27,10 @@
 		{
 			"name": "📦 @lndsld/react-hooks",
 			"path": "libs/react-hooks"
+		},
+		{
+			"name": "📦 @lndsld/config-builders",
+			"path": "libs/config-builders"
 		}
 	],
 	"settings": {

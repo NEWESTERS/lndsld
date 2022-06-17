@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lndsld/config-builders",
+      "comment": "Package initialized",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@lndsld/config-builders"
+}

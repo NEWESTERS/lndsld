@@ -1,8 +1,11 @@
-import { BabelConfig } from '../types';
-import { BabelConfigBuilder, WebpackConfigBuilderPlugin } from '../utils';
+import {
+	BabelConfigBuilder,
+	BabelConfigBuilderPlugin,
+	WebpackConfigBuilderPlugin
+} from '@lndsld/config-builders';
 
 export interface ApplyBabelOptions {
-	customizeBabel?: BabelConfig | ((config: BabelConfig) => BabelConfig);
+	customizeBabel?: BabelConfigBuilderPlugin<ApplyBabelOptions>;
 	extensions?: string[];
 }
 
@@ -13,14 +16,14 @@ function createExtensionRegExp(extensions: string[]): RegExp {
 export const babelPlugin: WebpackConfigBuilderPlugin<ApplyBabelOptions> = (builder) => {
 	const { customizeBabel, extensions = ['.ts', '.js'] } = builder.env;
 
-	const babelConfigBuilder = new BabelConfigBuilder();
+	const babelConfigBuilder = new BabelConfigBuilder(builder.env);
 
 	babelConfigBuilder
 		.addPreset([require.resolve('@babel/preset-env'), { targets: { browsers: 'last 2 versions' } }])
 		.addPreset(require.resolve('@babel/preset-typescript'));
 
 	if (customizeBabel) {
-		babelConfigBuilder.customize(customizeBabel);
+		babelConfigBuilder.apply(customizeBabel);
 	}
 
 	builder

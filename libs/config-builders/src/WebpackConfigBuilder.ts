@@ -1,27 +1,37 @@
 import { Configuration, RuleSetRule, WebpackPluginInstance } from 'webpack';
 import { merge } from 'webpack-merge';
 
-export type WebpackConfigBuilderPlugin<Env = {}> = (builder: WebpackConfigBuilder<Env>) => void;
+/**
+ * Declaration of plugin for webpack configuration builder
+ * @public
+ */
+export type WebpackConfigBuilderPlugin<Environment = {}> = (
+	builder: WebpackConfigBuilder<Environment>
+) => void;
 
-class WebpackConfigBuilder<Env = {}> {
+/**
+ * Builder for webpack configuration
+ * @public
+ */
+class WebpackConfigBuilder<Environment = {}> {
 	private _config: Configuration = {};
-	private _env: Env;
+	private _env: Environment;
 
-	constructor(env: Env) {
-		this._env = env;
+	public constructor(environment: Environment) {
+		this._env = environment;
 	}
 
 	/** Readonly build env */
-	public get env(): Readonly<Env> {
+	public get env(): Readonly<Environment> {
 		return this._env;
 	}
 
-	/** Get current config */
+	/** Current webpack configuration */
 	public get config(): Readonly<Configuration> {
 		return this._config;
 	}
 
-	/** Merge additional config */
+	/** Merge additional configuration */
 	public merge(config: Configuration): this {
 		this._config = merge(this._config, config);
 
@@ -35,7 +45,7 @@ class WebpackConfigBuilder<Env = {}> {
 		});
 	}
 
-	/** Add rule */
+	/** Add module rule to configuration */
 	public addRule(rule: RuleSetRule): this {
 		return this.merge({
 			module: {
@@ -44,15 +54,15 @@ class WebpackConfigBuilder<Env = {}> {
 		});
 	}
 
-	/** Manually transform config */
+	/** Manually transform configuration */
 	public map(transformer: (config: Configuration) => Configuration): this {
 		this._config = transformer(this._config);
 
 		return this;
 	}
 
-	/** Apply plugin */
-	public apply(plugin: WebpackConfigBuilderPlugin<Env>): this {
+	/** Apply builder plugin */
+	public apply(plugin: WebpackConfigBuilderPlugin<Environment>): this {
 		plugin(this);
 
 		return this;

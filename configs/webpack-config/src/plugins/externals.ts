@@ -1,5 +1,6 @@
+import { WebpackConfigBuilderPlugin } from '@lndsld/config-builders';
+
 import { PackageJson } from '../types';
-import { WebpackConfigBuilderPlugin } from '../utils';
 
 export interface ApplyExternalsOptions {
 	packageJson: PackageJson;

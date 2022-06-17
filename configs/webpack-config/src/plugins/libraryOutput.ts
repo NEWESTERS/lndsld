@@ -1,7 +1,7 @@
+import { WebpackConfigBuilderPlugin } from '@lndsld/config-builders';
 import path from 'path';
 
 import { PackageJson } from '../types';
-import { WebpackConfigBuilderPlugin } from '../utils';
 
 export interface ApplyLibraryOutputOptions {
 	packageJson: PackageJson;
