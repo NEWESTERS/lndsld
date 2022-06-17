@@ -1,9 +1,8 @@
 import { Configuration } from 'webpack';
+import { WebpackConfigBuilder, WebpackConfigBuilderPlugin } from '@lndsld/config-builders';
 
 import { BuildEnv, BuildEnvCustomization, resolveBuildEnv } from './env';
-
 import { babelPlugin, libraryOutputPlugin, externalsPlugin } from './plugins';
-import { WebpackConfigBuilder, WebpackConfigBuilderPlugin } from './utils';
 
 interface CreateLibraryOptions extends BuildEnvCustomization {
 	customizeWebpack?: WebpackConfigBuilderPlugin<BuildEnv>;

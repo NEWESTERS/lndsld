@@ -16,7 +16,7 @@
     "@microsoft/api-extractor": "~7.24.1",
     "eslint": "~8.12.0",
     "npm-run-all": "~4.1.5",
-    "typescript": "~4.7.3",
+    "typescript": "~4.7.4",
     "webpack": "~5.73.0",
     "webpack-cli": "~4.3.1",
     "@types/react": "~18.0.12",
