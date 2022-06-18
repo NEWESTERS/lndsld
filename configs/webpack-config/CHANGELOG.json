@@ -1,0 +1,35 @@
+{
+  "name": "@lndsld/webpack-config",
+  "entries": [
+    {
+      "version": "1.0.0",
+      "tag": "@lndsld/webpack-config_v1.0.0",
+      "date": "Sat, 18 Jun 2022 21:51:32 GMT",
+      "comments": {
+        "major": [
+          {
+            "comment": "Added webpack customization and auto resolving"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "Webpack builder API implemented"
+          },
+          {
+            "comment": "Config builders transfered to separate package"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "Dependency management"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@lndsld/config-builders\" to `0.2.0`"
+          }
+        ]
+      }
+    }
+  ]
+}

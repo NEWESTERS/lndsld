@@ -1,10 +1,11 @@
 {
   "name": "@lndsld/eslint-config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "scripts": {
     "build": ""
   },
+  "files": ["library"],
   "dependencies": {
     "@rushstack/eslint-config": "~2.5.2",
     "@babel/eslint-parser": "~7.17.0",

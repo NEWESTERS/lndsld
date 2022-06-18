@@ -1,0 +1,22 @@
+{
+  "name": "@lndsld/eslint-config",
+  "entries": [
+    {
+      "version": "0.1.1",
+      "tag": "@lndsld/eslint-config_v0.1.1",
+      "date": "Sat, 18 Jun 2022 21:51:32 GMT",
+      "comments": {
+        "none": [
+          {
+            "comment": "Update dependencies"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "Dependency management"
+          }
+        ]
+      }
+    }
+  ]
+}

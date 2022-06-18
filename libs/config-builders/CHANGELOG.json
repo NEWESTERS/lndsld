@@ -1,0 +1,22 @@
+{
+  "name": "@lndsld/config-builders",
+  "entries": [
+    {
+      "version": "0.2.0",
+      "tag": "@lndsld/config-builders_v0.2.0",
+      "date": "Sat, 18 Jun 2022 21:51:32 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Package initialized"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@lndsld/eslint-config\" to `0.1.1`"
+          }
+        ]
+      }
+    }
+  ]
+}

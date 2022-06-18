@@ -1,0 +1,28 @@
+{
+  "name": "@lndsld/fp",
+  "entries": [
+    {
+      "version": "0.1.1",
+      "tag": "@lndsld/fp_v0.1.1",
+      "date": "Sat, 18 Jun 2022 21:51:32 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Update webpack config"
+          },
+          {
+            "comment": "Dependency management"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@lndsld/eslint-config\" to `0.1.1`"
+          },
+          {
+            "comment": "Updating dependency \"@lndsld/webpack-config\" to `1.0.0`"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "name": "@lndsld/react-hooks",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/react-hooks.d.ts",
@@ -9,19 +9,22 @@
     "build:types": "tsc -p tsconfig.prod.json && api-extractor run --local --diagnostics",
     "build": "run-s build:impl build:types"
   },
+  "files": [
+    "lib"
+  ],
   "devDependencies": {
     "@lndsld/eslint-config": "workspace:*",
     "@lndsld/webpack-config": "workspace:*",
     "@microsoft/api-documenter": "~7.17.16",
     "@microsoft/api-extractor": "~7.24.1",
+    "@types/react": "~18.0.12",
     "eslint": "~8.12.0",
+    "eslint-plugin-react-hooks": "~4.6.0",
     "npm-run-all": "~4.1.5",
+    "react": ">= 17",
     "typescript": "~4.7.4",
     "webpack": "~5.73.0",
-    "webpack-cli": "~4.3.1",
-    "@types/react": "~18.0.12",
-    "react": ">= 17",
-    "eslint-plugin-react-hooks": "~4.6.0"
+    "webpack-cli": "~4.3.1"
   },
   "peerDependencies": {
     "react": ">= 17"

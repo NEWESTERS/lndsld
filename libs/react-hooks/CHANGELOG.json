@@ -1,0 +1,30 @@
+{
+  "name": "@lndsld/react-hooks",
+  "entries": [
+    {
+      "version": "0.2.0",
+      "tag": "@lndsld/react-hooks_v0.2.0",
+      "date": "Sat, 18 Jun 2022 21:51:32 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "React hooks library initialized with some hooks"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "Update webpack config"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@lndsld/eslint-config\" to `0.1.1`"
+          },
+          {
+            "comment": "Updating dependency \"@lndsld/webpack-config\" to `1.0.0`"
+          }
+        ]
+      }
+    }
+  ]
+}

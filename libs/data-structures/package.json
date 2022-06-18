@@ -1,9 +1,12 @@
 {
   "name": "@lndsld/data-structures",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "lib/data-structures.js",
   "types": "lib/data-structures.d.ts",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "build:impl": "webpack",
     "build:types": "tsc -p tsconfig.prod.json && api-extractor run --local --diagnostics",
