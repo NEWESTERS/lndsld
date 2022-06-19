@@ -15,11 +15,15 @@ Library with reusable React hooks
 |  [useEvent(callback)](./react-hooks.useevent.md) | Get stable reference to event handler |
 |  [useForwardedRef(forwardedRef)](./react-hooks.useforwardedref.md) | Make proxy for <code>ForwardedRef</code> |
 |  [useInterval(callback, initialDelay)](./react-hooks.useinterval.md) | Let callback automatically run with specified time interval |
+|  [usePointerEvent(eventType, handler, options)](./react-hooks.usepointerevent.md) | Subscribe to pointer events |
+|  [usePointerEvent(eventType, handler, options)](./react-hooks.usepointerevent_1.md) |  |
+|  [usePointerEvent(eventType, handler, options)](./react-hooks.usepointerevent_2.md) |  |
 |  [usePortalRoot()](./react-hooks.useportalroot.md) | Create root for React portal |
 |  [usePrevious(value)](./react-hooks.useprevious.md) | Get value from previous render |
 |  [usePropState(prop)](./react-hooks.usepropstate.md) | Create state from prop<!-- -->This state will by synced with prop |
 |  [useThrottledCallback(callback, timeout)](./react-hooks.usethrottledcallback.md) | Throttle callback<!-- -->Reduce frequency of callback invocations |
 |  [useToggle(value)](./react-hooks.usetoggle.md) | Create boolean toggle |
+|  [useUserSelect(value, options)](./react-hooks.useuserselect.md) | Sets <code>user-select</code> CSS property |
 
 ## Interfaces
 
@@ -27,6 +31,8 @@ Library with reusable React hooks
 |  --- | --- |
 |  [IntervalAPI](./react-hooks.intervalapi.md) | Declaration of API to control interval |
 |  [ToggleAdditionalAPI](./react-hooks.toggleadditionalapi.md) | Declaration of additional API for toggle |
+|  [UsePointerEventOptions](./react-hooks.usepointereventoptions.md) | Configuration options for <code>usePointerEvent</code> hook |
+|  [UseUserSelectOptions](./react-hooks.useuserselectoptions.md) | Configuration options for <code>useUserSelect</code> hook |
 
 ## Variables
 
@@ -40,4 +46,12 @@ Library with reusable React hooks
 |  --- | --- |
 |  [ChangeCallback](./react-hooks.changecallback.md) | Callback, invoked on value change |
 |  [EventCallback](./react-hooks.eventcallback.md) | Event handler declaration |
+|  [MouseEventType](./react-hooks.mouseeventtype.md) | Type of mouse event |
+|  [NativeEventHandler](./react-hooks.nativeeventhandler.md) | Native <code>Event</code> handler |
+|  [NativeMouseEventHandler](./react-hooks.nativemouseeventhandler.md) | Native <code>MouseEvent</code> handler |
+|  [NativePointerEventHandler](./react-hooks.nativepointereventhandler.md) | Native <code>PointerEvent</code> handler |
+|  [NativeTouchEventHandler](./react-hooks.nativetoucheventhandler.md) | Native <code>TouchEvent</code> handler |
+|  [PointerEventType](./react-hooks.pointereventtype.md) | Type of pointer event |
+|  [TouchEventType](./react-hooks.toucheventtype.md) | Type of touch event |
+|  [UserSelectType](./react-hooks.userselecttype.md) | Available values for <code>user-select</code> property |
 

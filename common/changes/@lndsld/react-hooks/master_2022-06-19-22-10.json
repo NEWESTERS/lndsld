@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lndsld/react-hooks",
+      "comment": "usePointerEvent and useUserSelect hooks implemented",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@lndsld/react-hooks"
+}

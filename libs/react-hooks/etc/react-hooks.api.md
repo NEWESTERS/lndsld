@@ -22,10 +22,31 @@ export interface IntervalAPI {
 }
 
 // @public
+export type MouseEventType = Extract<keyof HTMLElementEventMap, `mouse${string}`>;
+
+// @public
+export type NativeEventHandler = EventCallback<[Event]>;
+
+// @public
+export type NativeMouseEventHandler = EventCallback<[MouseEvent]>;
+
+// @public
+export type NativePointerEventHandler = EventCallback<[PointerEvent]>;
+
+// @public
+export type NativeTouchEventHandler = EventCallback<[TouchEvent]>;
+
+// @public
+export type PointerEventType = Extract<keyof HTMLElementEventMap, `pointer${string}`>;
+
+// @public
 export interface ToggleAdditionalAPI {
     activate: () => void;
     deactivate: () => void;
 }
+
+// @public
+export type TouchEventType = Extract<keyof HTMLElementEventMap, `touch${string}`>;
 
 // @public
 export function useChange<T>(observer: ChangeCallback<T>, observable: T): void;
@@ -46,6 +67,23 @@ export function useForwardedRef<T>(forwardedRef: ForwardedRef<T> | undefined): R
 export function useInterval(callback: EventCallback<[]>, initialDelay?: number): IntervalAPI;
 
 // @public
+export function usePointerEvent<E extends HTMLElement>(eventType: MouseEventType, handler: NativeMouseEventHandler, options?: UsePointerEventOptions<E>): void;
+
+// @public (undocumented)
+export function usePointerEvent<E extends HTMLElement>(eventType: TouchEventType, handler: NativeTouchEventHandler, options?: UsePointerEventOptions<E>): void;
+
+// @public (undocumented)
+export function usePointerEvent<E extends HTMLElement>(eventType: PointerEventType, handler: NativePointerEventHandler, options?: UsePointerEventOptions<E>): void;
+
+// @public
+export interface UsePointerEventOptions<E extends HTMLElement> {
+    disabled?: boolean;
+    // (undocumented)
+    passive?: boolean;
+    ref?: RefObject<E>;
+}
+
+// @public
 export function usePortalRoot(): HTMLDivElement;
 
 // @public
@@ -55,9 +93,20 @@ export function usePrevious<T>(value: T): T | undefined;
 export function usePropState<T>(prop: T): [T, Dispatch<SetStateAction<T>>];
 
 // @public
+export type UserSelectType = 'none' | 'auto' | 'text' | 'contain' | 'all';
+
+// @public
 export function useThrottledCallback<P extends unknown[]>(callback: EventCallback<P>, timeout: number): EventCallback<P>;
 
 // @public
 export function useToggle(value?: boolean): [boolean, () => void, ToggleAdditionalAPI];
+
+// @public
+export function useUserSelect<E extends HTMLElement>(value: UserSelectType | boolean, options?: UseUserSelectOptions<E>): void;
+
+// @public
+export interface UseUserSelectOptions<E extends HTMLElement> {
+    ref?: RefObject<E>;
+}
 
 ```

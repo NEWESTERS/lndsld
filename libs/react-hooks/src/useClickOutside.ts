@@ -1,7 +1,7 @@
-import { RefObject, useEffect } from 'react';
+import { RefObject } from 'react';
 
 import { EventCallback } from './types';
-import useEvent from './useEvent';
+import usePointerEvent from './usePointerEvent';
 
 /**
  * Subscribe to clicks outside of element
@@ -13,21 +13,14 @@ const useClickOutside = <T extends HTMLElement = HTMLElement>(
 	callback: EventCallback<[]>,
 	ref: RefObject<T>
 ): void => {
-	const onClick = useEvent((event: Event): void => {
+	const onClick = (event: Event): void => {
 		if (!ref.current?.contains(event.target as Node)) {
 			callback();
 		}
-	});
+	};
 
-	useEffect(() => {
-		document.addEventListener('mousedown', onClick);
-		document.addEventListener('touchstart', onClick);
-
-		return () => {
-			document.removeEventListener('mousedown', onClick);
-			document.removeEventListener('touchstart', onClick);
-		};
-	}, [onClick]);
+	usePointerEvent('mousedown', onClick);
+	usePointerEvent('touchstart', onClick);
 };
 
 export default useClickOutside;

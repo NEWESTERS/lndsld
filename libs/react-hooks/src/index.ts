@@ -3,7 +3,7 @@
  * Library with reusable React hooks
  */
 
-export type { EventCallback } from './types';
+export * from './types';
 
 export { default as useChange } from './useChange';
 export type { ChangeCallback } from './useChange';
@@ -29,3 +29,9 @@ export type { IntervalAPI } from './useInterval';
 export { default as useClickOutside } from './useClickOutside';
 
 export { default as usePortalRoot } from './usePortalRoot';
+
+export { default as useUserSelect } from './useUserSelect';
+export type { UserSelectType, UseUserSelectOptions } from './useUserSelect';
+
+export { default as usePointerEvent } from './usePointerEvent';
+export type { UsePointerEventOptions } from './usePointerEvent';

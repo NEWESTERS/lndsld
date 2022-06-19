@@ -9,19 +9,14 @@ import { EventCallback } from './types';
  * @see {@link https://github.com/reactjs/rfcs/blob/useevent/text/0000-useevent.md}
  * @public
  */
-function useEvent<P extends unknown[]>(
-	callback: EventCallback<P>
-): EventCallback<P> {
+function useEvent<P extends unknown[]>(callback: EventCallback<P>): EventCallback<P> {
 	const callbackRef = useRef(callback);
 
 	useEffect(() => {
 		callbackRef.current = callback;
 	});
 
-	return useCallback(
-		(...parameters) => callbackRef.current(...parameters),
-		[]
-	);
+	return useCallback((...parameters) => callbackRef.current(...parameters), []);
 }
 
 export default useEvent;
