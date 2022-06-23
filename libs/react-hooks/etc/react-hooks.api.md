@@ -10,7 +10,7 @@ import { RefObject } from 'react';
 import { SetStateAction } from 'react';
 
 // @public
-export type ChangeCallback<T> = (current: T, previous: T | undefined) => void;
+export type ChangeCallback<T> = (current: T, previous: T) => void;
 
 // @public
 export type EventCallback<P extends unknown[]> = (...parameters: P) => void;
@@ -88,6 +88,9 @@ export function usePortalRoot(): HTMLDivElement;
 
 // @public
 export function usePrevious<T>(value: T): T | undefined;
+
+// @public (undocumented)
+export function usePrevious<T, I>(value: T, initialValue: I): T | I;
 
 // @public
 export function usePropState<T>(prop: T): [T, Dispatch<SetStateAction<T>>];

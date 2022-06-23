@@ -423,6 +423,11 @@
       "packageName": "@lndsld/config-builders",
       "projectFolder": "libs/config-builders",
       "shouldPublish": true
+    },
+    {
+      "packageName": "@lndsld/heft-library-rig",
+      "projectFolder": "configs/heft-library-rig",
+      "shouldPublish": true
     }
     // {
     //   /**

@@ -67,6 +67,10 @@ common/autoinstallers/*/.npmrc
 # Heft
 .heft
 
-# Build output
-lib
+# Common toolchain intermediate files
 temp
+lib
+lib-amd
+lib-es6
+dist
+build
