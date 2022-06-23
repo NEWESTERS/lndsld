@@ -1,8 +1,7 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable @typescript-eslint/ban-types */
 function flow<A extends Array<unknown>, B>(ab: (...a: A) => B): (...a: A) => B;
-function flow<A extends Array<unknown>, B, C>(
-	ab: (...a: A) => B,
-	bc: (b: B) => C
-): (...a: A) => C;
+function flow<A extends Array<unknown>, B, C>(ab: (...a: A) => B, bc: (b: B) => C): (...a: A) => C;
 function flow<A extends Array<unknown>, B, C, D>(
 	ab: (...a: A) => B,
 	bc: (b: B) => C,
@@ -22,25 +21,19 @@ function flow<A extends Array<unknown>, B, C, D, E, F>(
 	ef: (d: E) => F
 ): (...a: A) => F;
 
-function flow(
-	ab: Function,
-	bc?: Function,
-	cd?: Function,
-	de?: Function,
-	ef?: Function
-): unknown {
-	return (...a: any[]) => {
-		let res = ab(...a);
+function flow(ab: Function, bc?: Function, cd?: Function, de?: Function, ef?: Function): unknown {
+	return (...a: unknown[]) => {
+		let result = ab(...a);
 
-		bc && (res = bc(res));
+		bc && (result = bc(result));
 
-		cd && (res = cd(res));
+		cd && (result = cd(result));
 
-		de && (res = de(res));
+		de && (result = de(result));
 
-		ef && (res = ef(res));
+		ef && (result = ef(result));
 
-		return res;
+		return result;
 	};
 }
 

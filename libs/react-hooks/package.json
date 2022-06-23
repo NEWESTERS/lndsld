@@ -8,16 +8,14 @@
   "scripts": {
     "build": "heft build --clean"
   },
-  "files": [
-    "lib"
-  ],
   "devDependencies": {
     "@lndsld/eslint-config": "workspace:*",
     "@lndsld/heft-library-rig": "workspace:*",
     "@rushstack/heft": "~0.45.8",
     "@types/react": "~18.0.12",
     "eslint-plugin-react-hooks": "~4.6.0",
-    "react": ">= 17"
+    "react": ">= 17",
+    "eslint": "~8.12.0"
   },
   "peerDependencies": {
     "react": ">= 17"

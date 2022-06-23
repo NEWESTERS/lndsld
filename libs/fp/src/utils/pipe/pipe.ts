@@ -1,46 +1,31 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable @typescript-eslint/ban-types */
 function pipe<A, B>(a: A, ab: (a: A) => B): B;
 function pipe<A, B, C>(a: A, ab: (a: A) => B, bc: (b: B) => C): C;
-function pipe<A, B, C, D>(
-	a: A,
-	ab: (a: A) => B,
-	bc: (b: B) => C,
-	cd: (c: C) => D
-): D;
-function pipe<A, B, C, D, E>(
-	a: A,
-	ab: (a: A) => B,
-	bc: (b: B) => C,
-	cd: (c: C) => D,
-	de: (c: D) => E
-): E;
+function pipe<A, B, C, D>(a: A, ab: (a: A) => B, bc: (b: B) => C, cd: (c: C) => D): D;
+function pipe<A, B, C, D, E>(a: A, ab: (a: A) => B, bc: (b: B) => C, cd: (c: C) => D, de: (c: D) => E): E;
 function pipe<A, B, C, D, E, F>(
 	a: A,
 	ab: (a: A) => B,
 	bc: (b: B) => C,
 	cd: (c: C) => D,
 	de: (c: D) => E,
+	// eslint-disable-next-line unicorn/prevent-abbreviations
 	ef: (e: E) => F
 ): E;
 
-function pipe(
-	a: unknown,
-	ab: Function,
-	bc?: Function,
-	cd?: Function,
-	de?: Function,
-	ef?: Function
-): unknown {
-	let res = ab(a);
+function pipe(a: unknown, ab: Function, bc?: Function, cd?: Function, de?: Function, ef?: Function): unknown {
+	let result = ab(a);
 
-	bc && (res = bc(res));
+	bc && (result = bc(result));
 
-	cd && (res = cd(res));
+	cd && (result = cd(result));
 
-	de && (res = de(res));
+	de && (result = de(result));
 
-	ef && (res = ef(res));
+	ef && (result = ef(result));
 
-	return res;
+	return result;
 }
 
 export default pipe;
