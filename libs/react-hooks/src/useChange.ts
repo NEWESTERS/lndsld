@@ -9,7 +9,9 @@ import usePrevious from './usePrevious';
  * @param previous - value from previous render
  * @public
  */
-export type ChangeCallback<T> = (current: T, previous: T | undefined) => void;
+export type ChangeCallback<T> = (current: T, previous: T) => void;
+
+const INITIAL_VALUE = Symbol('Initial value');
 
 /**
  * Subscribe to value changes
@@ -19,11 +21,11 @@ export type ChangeCallback<T> = (current: T, previous: T | undefined) => void;
  * @public
  */
 function useChange<T>(observer: ChangeCallback<T>, observable: T): void {
-	const previousObservable = usePrevious(observable);
+	const previousObservable = usePrevious(observable, INITIAL_VALUE);
 	const onChange = useEvent(observer);
 
 	useEffect(() => {
-		if (previousObservable !== observable) {
+		if (previousObservable !== INITIAL_VALUE && previousObservable !== observable) {
 			onChange(observable, previousObservable);
 		}
 	}, [previousObservable, observable, onChange]);

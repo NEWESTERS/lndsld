@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lndsld/react-hooks",
+      "comment": "Eliminated useChange hook trigger on mount",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@lndsld/react-hooks"
+}
