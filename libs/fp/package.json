@@ -7,14 +7,12 @@
   "types": "lib/fp.d.ts",
   "scripts": {
     "build": "heft build --clean",
-    "generate": "plop",
     "test:impl": "heft test --no-build",
     "test:types": "jest -c jest.config.types.js",
     "test": "npm run test:impl && npm run test:types"
   },
   "devDependencies": {
     "@lndsld/eslint-config": "workspace:*",
-    "@lndsld/webpack-config": "workspace:*",
     "@lndsld/heft-library-rig": "workspace:*",
     "@rushstack/heft": "~0.45.8",
     "@tsd/typescript": "~4.6.3",
