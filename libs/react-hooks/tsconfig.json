@@ -1,10 +1,9 @@
 {
+    "extends": "@lndsld/heft-library-rig/profiles/default/tsconfig.json",
     "compilerOptions": {
-        "lib": ["ESNext", "DOM"],
-        "module": "UMD",
-        "moduleResolution": "Node",
-        "allowJs": false,
-        "strict": true,
+        "outDir": "lib/esm",
+        "declarationDir": "temp/types",
+        "lib": ["ESNext", "DOM"]
     },
     "include": ["src"],
 }

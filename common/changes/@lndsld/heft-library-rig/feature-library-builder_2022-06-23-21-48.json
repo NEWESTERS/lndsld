@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lndsld/heft-library-rig",
+      "comment": "Rig initializization",
+      "type": "none"
+    }
+  ],
+  "packageName": "@lndsld/heft-library-rig"
+}
