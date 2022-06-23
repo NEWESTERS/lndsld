@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lndsld/math",
+      "comment": "Migration to heft-library-rig",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@lndsld/math"
+}
