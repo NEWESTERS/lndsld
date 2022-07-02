@@ -2,6 +2,26 @@
   "name": "@lndsld/react-hooks",
   "entries": [
     {
+      "version": "0.3.0",
+      "tag": "@lndsld/react-hooks_v0.3.0",
+      "date": "Sun, 26 Jun 2022 20:55:06 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Migration to heft-library-rig"
+          },
+          {
+            "comment": "usePointerEvent and useUserSelect hooks implemented"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "Eliminated useChange hook trigger on mount"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.2.0",
       "tag": "@lndsld/react-hooks_v0.2.0",
       "date": "Sat, 18 Jun 2022 21:51:32 GMT",

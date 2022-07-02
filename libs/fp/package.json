@@ -1,6 +1,6 @@
 {
   "name": "@lndsld/fp",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "",
   "main": "lib/commonjs/index.js",
   "module": "lib/esm/index.js",
@@ -16,10 +16,10 @@
     "@lndsld/heft-library-rig": "workspace:*",
     "@rushstack/heft": "~0.45.8",
     "@tsd/typescript": "~4.6.3",
+    "@types/heft-jest": "~1.0.3",
     "@types/jest": "~27.4.1",
     "jest": "~27.5.1",
     "jest-runner-tsd": "~3.0.0",
-    "tsd-lite": "~0.5.3",
-    "@types/heft-jest": "~1.0.3"
+    "tsd-lite": "~0.5.3"
   }
 }

@@ -1,0 +1,17 @@
+{
+  "name": "@lndsld/heft-library-rig",
+  "entries": [
+    {
+      "version": "0.1.0",
+      "tag": "@lndsld/heft-library-rig_v0.1.0",
+      "date": "Sun, 26 Jun 2022 20:55:06 GMT",
+      "comments": {
+        "none": [
+          {
+            "comment": "Rig initializization"
+          }
+        ]
+      }
+    }
+  ]
+}

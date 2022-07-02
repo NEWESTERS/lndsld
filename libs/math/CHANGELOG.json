@@ -2,6 +2,23 @@
   "name": "@lndsld/math",
   "entries": [
     {
+      "version": "0.2.0",
+      "tag": "@lndsld/math_v0.2.0",
+      "date": "Sun, 26 Jun 2022 20:55:06 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Migration to heft-library-rig"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@lndsld/fp\" to `0.2.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.1.1",
       "tag": "@lndsld/math_v0.1.1",
       "date": "Sat, 18 Jun 2022 21:51:32 GMT",
