@@ -1,4 +1,4 @@
-import { expectType, expectError } from 'tsd-lite';
+import { expectType, expectError } from 'tsd';
 
 import IList from './IList';
 

@@ -9,8 +9,8 @@
     "build": "heft build --clean",
     "generate": "plop",
     "test:impl": "heft test --no-build",
-    "test:types": "jest -c jest.config.types.js",
-    "test": "npm run test:impl"
+    "test:types": "tsd",
+    "test": "npm run test:impl && npm run test:types"
   },
   "dependencies": {
     "@lndsld/fp": "workspace:*",
@@ -20,15 +20,11 @@
     "@lndsld/eslint-config": "workspace:*",
     "@lndsld/heft-library-rig": "workspace:*",
     "@rushstack/heft": "~0.45.8",
-    "@tsd/typescript": "~4.6.3",
-    "@types/jest": "~27.4.1",
     "@types/heft-jest": "~1.0.3",
     "@types/node": "~13.11.1",
     "@types/object-hash": "~2.2.1",
-    "jest": "~27.5.1",
-    "jest-runner-tsd": "~3.0.0",
     "plop": "~2.6.0",
-    "tsd-lite": "~0.5.3"
+    "tsd": "~0.22.0"
   },
   "tsd": {
     "directory": "src"

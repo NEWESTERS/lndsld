@@ -1,4 +1,4 @@
-import { expectType, expectError } from 'tsd-lite';
+import { expectType, expectError } from 'tsd';
 
 import IStack from './IStack';
 
@@ -26,18 +26,10 @@ expectError(IStack.has('text')(stack));
 
 // find
 
-expectType<number | undefined>(
-	IStack.find((value: number) => value === 1)(stack)
-);
+expectType<number | undefined>(IStack.find((value: number) => value === 1)(stack));
 
-expectType<1 | undefined>(
-	IStack.find((value: number): value is 1 => value === 1)(stack)
-);
+expectType<1 | undefined>(IStack.find((value: number): value is 1 => value === 1)(stack));
 
-expectType<number | undefined>(
-	IStack.find((value: unknown) => value === 1)(stack)
-);
+expectType<number | undefined>(IStack.find((value: unknown) => value === 1)(stack));
 
-expectError(
-	IStack.find((value: number): boolean => value > 1)(IStack.create<unknown>())
-);
+expectError(IStack.find((value: number): boolean => value > 1)(IStack.create<unknown>()));

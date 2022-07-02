@@ -16,24 +16,16 @@ declare namespace IOrderedKeyTree {
 	export interface API {
 		create<K extends AnyKey = string>(rootKey: K): IOrderedKeyTree<K>;
 
-		pushChild<K extends AnyKey>(
-			parentKey: K,
-			childKey: K
-		): Transform<IOrderedKeyTree<K>>;
+		pushChild<K extends AnyKey>(parentKey: K, childKey: K): Transform<IOrderedKeyTree<K>>;
 
-		getChildren(
-			parentKey: AnyKey
-		): (tree: IOrderedKeyTree) => IList<AnyKey> | undefined;
+		getChildren(parentKey: AnyKey): (tree: IOrderedKeyTree) => IList<AnyKey> | undefined;
 	}
 }
 
 const IOrderedKeyTree = {
 	create: (rootKey) => ({
 		rootKey,
-		structure: pipe(
-			IDictionary.create(),
-			IDictionary.set(rootKey, IList.create())
-		),
+		structure: pipe(IDictionary.create(), IDictionary.set(rootKey, IList.create()))
 	}),
 
 	pushChild: (parentKey, childKey) => (tree) => {
@@ -48,11 +40,11 @@ const IOrderedKeyTree = {
 				IDictionary.modify(parentKey, IList.push(childKey)),
 				IDictionary.set(childKey, IList.create())
 			)
+			// @ts-ignore
 		)(tree);
 	},
 
-	getChildren: (parentKey) => (tree) =>
-		IDictionary.get(parentKey)(tree.structure),
+	getChildren: (parentKey) => (tree) => IDictionary.get(parentKey)(tree.structure)
 } as IOrderedKeyTree.API;
 
 export default IOrderedKeyTree;

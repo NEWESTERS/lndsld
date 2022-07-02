@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lndsld/data-structures",
+      "comment": "Type refinements for `IRecord` methods: `set`, `modify` and `removeKey`",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@lndsld/data-structures"
+}
