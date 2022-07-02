@@ -90,6 +90,7 @@ importers:
       '@types/heft-jest': ~1.0.3
       '@types/node': ~13.11.1
       '@types/object-hash': ~2.2.1
+      eslint: ~8.12.0
       object-hash: ~3.0.0
       plop: ~2.6.0
       tsd: ~0.22.0
@@ -103,6 +104,7 @@ importers:
       '@types/heft-jest': 1.0.3
       '@types/node': 13.11.1
       '@types/object-hash': 2.2.1
+      eslint: 8.12.0
       plop: 2.6.0
       tsd: 0.22.0
 

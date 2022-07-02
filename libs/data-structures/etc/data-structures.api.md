@@ -11,8 +11,26 @@ import { TypeGuard } from '@lndsld/fp';
 // @public (undocumented)
 export type AnyKey = keyof any;
 
+// @public
+function create<T>(...parameters: T[]): IList<T>;
+
+// @public
+function filter<A, B extends A>(predicate: TypeGuard<A, B>): Transform<IList<A>, IList<B>>;
+
+// @public (undocumented)
+function filter<A>(predicate: Predicate<A>): Transform<IList<A>, IList<A>>;
+
+// @public (undocumented)
+function get<K extends AnyKey>(key: K): <R extends IRecord<K>>(record: R) => R[K];
+
+// @public (undocumented)
+function getKeys<T extends AnyKey>(record: IRecord<T>): T[];
+
 // @public (undocumented)
 export function hash(item: unknown): string;
+
+// @public (undocumented)
+function hasKey<T extends AnyKey>(key: T): (record: object) => record is IRecord<T>;
 
 // @public (undocumented)
 export type IDictionary<T = unknown> = Record<AnyKey, T>;
@@ -86,25 +104,28 @@ export type IList<T = unknown> = IStack<T>;
 // @public (undocumented)
 export namespace IList {
     // (undocumented)
-    export interface API extends IStack.API {
-        // (undocumented)
-        create<T>(...parameters: T[]): IList<T>;
-        // (undocumented)
-        filter: {
-            <A, B extends A>(predicate: TypeGuard<A, B>): Transform<IList<A>, IList<B>>;
-            <A>(predicate: Predicate<A>): Transform<IList<A>, IList<A>>;
-        };
-        // (undocumented)
-        removeIndex(index: number): <T>(list: IList<T>) => IList<T>;
-        // (undocumented)
-        sort<A>(comparator: (itemA: A, itemB: A) => number): Transform<IList<A>>;
-    }
-    // (undocumented)
     export type InferValue<L> = IStack.InferValue<L>;
 }
 
 // @public (undocumented)
-export const IList: IList.API;
+export const IList: {
+    create: typeof methods_2.create;
+    filter: typeof methods_2.filter;
+    removeIndex: typeof methods_2.removeIndex;
+    sort: typeof methods_2.sort;
+    push<T>(item: T): Transform<readonly T[], readonly T[]>;
+    pop<T_1>(stack: readonly T_1[]): readonly T_1[];
+    find: {
+        <A, B extends A>(predicate: TypeGuard<A, B>): Transform<readonly A[], B | undefined>;
+        (predicate: Predicate<unknown>): <T_2>(stack: readonly T_2[]) => T_2 | undefined;
+        <A_1>(predicate: Predicate<A_1>): Transform<readonly A_1[], A_1 | undefined>;
+    };
+    has<T_3>(item: T_3): Transform<readonly T_3[], boolean>;
+    getLength(stack: readonly unknown[]): number;
+    getLast<T_4>(stack: readonly T_4[]): T_4 | undefined;
+    concat<A_2>(stackA: readonly A_2[]): <B_1>(stackB: readonly B_1[]) => readonly (A_2 | B_1)[];
+    map<A_3, B_2>(callback: (item: A_3, index: number) => B_2): Transform<readonly A_3[], readonly B_2[]>;
+};
 
 // @public (undocumented)
 export interface IOrderedKeyTree<K extends AnyKey = string> {
@@ -161,30 +182,20 @@ export namespace IOrderedTree {
 export const IOrderedTree: IOrderedTree.API;
 
 // @public (undocumented)
-export namespace IRecord {
-    // (undocumented)
-    export interface API {
-        // (undocumented)
-        get<K extends AnyKey>(key: K): <R extends {
-            [key in K]: unknown;
-        }>(record: R) => R[K];
-        // (undocumented)
-        getKeys<T extends AnyKey>(record: Record<T, unknown>): T[];
-        // (undocumented)
-        hasKey<T extends AnyKey>(key: T): (record: object) => record is Record<T, unknown>;
-        // (undocumented)
-        isRecord(value: unknown): value is Record<AnyKey, unknown>;
-        // (undocumented)
-        modify<K extends AnyKey, V1, V2>(key: K, callback: Transform<V1, V2>): <R extends {}>(record: R) => Readonly<Omit<R, K> & Record<K, V2>>;
-        // (undocumented)
-        removeKey<K extends AnyKey>(key: K): <R extends {}>(record: R) => Readonly<Omit<R, K>>;
-        // (undocumented)
-        set<K extends AnyKey, V>(key: K, value: V): <R extends {}>(record: R) => Readonly<Omit<R, K> & Record<K, V>>;
-    }
-}
+export type IRecord<K extends AnyKey = AnyKey, V = unknown> = Readonly<Record<K, V>>;
 
 // @public (undocumented)
-export const IRecord: IRecord.API;
+export namespace IRecord {
+    // (undocumented)
+    export type AddProperty<R extends IRecord, K extends AnyKey, V> = K extends keyof R ? never : R & IRecord<K, V>;
+    // (undocumented)
+    export type OverrideProperty<R extends IRecord, K extends AnyKey, V> = AddProperty<Omit<R, K>, K, V>;
+}
+
+// Warning: (ae-forgotten-export) The symbol "methods" needs to be exported by the entry point index.d.ts
+//
+// @public (undocumented)
+export const IRecord: typeof methods;
 
 // @public (undocumented)
 export type ISet<T = unknown> = Record<string, T>;
@@ -224,6 +235,9 @@ export namespace ISet {
 
 // @public (undocumented)
 export const ISet: ISet.API;
+
+// @public (undocumented)
+function isRecord(value: unknown): value is IRecord;
 
 // @public (undocumented)
 export type IStack<T = unknown> = Readonly<Array<T>>;
@@ -289,6 +303,29 @@ export namespace ITree {
 
 // @public (undocumented)
 export const ITree: ITree.API;
+
+// @public (undocumented)
+function modify<K extends AnyKey, V1, V2>(key: K, callback: Transform<V1, V2>): <R extends IRecord<K, V1>>(record: R) => V1 extends V2 ? R : IRecord.OverrideProperty<R, K, V2>;
+
+// @public
+function removeIndex(index: number): <T>(list: IList<T>) => IList<T>;
+
+// @public (undocumented)
+function removeKey<K extends AnyKey>(key: K): <R extends {}>(record: R) => K extends keyof R ? Readonly<Omit<R, K>> : R;
+
+// @public (undocumented)
+function set<K extends AnyKey, V>(key: K, value: V): {
+    <R extends IRecord<K, V>>(record: R): R;
+    <R extends IRecord<K>>(record: R): IRecord.OverrideProperty<R, K, V>;
+    <R extends IRecord>(record: R): IRecord.AddProperty<R, K, V>;
+};
+
+// @public
+function sort<A>(comparator: (itemA: A, itemB: A) => number): Transform<IList<A>>;
+
+// Warnings were encountered during analysis:
+//
+// temp/types/structures/IList/IList.d.ts:8:5 - (ae-forgotten-export) The symbol "methods" needs to be exported by the entry point index.d.ts
 
 // (No @packageDocumentation comment for this package)
 

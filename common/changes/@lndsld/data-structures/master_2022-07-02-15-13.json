@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lndsld/data-structures",
+      "comment": "Improved compatibility with `pipe` for `IRecord` methods: `set`, `modify` and `removeKey`",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@lndsld/data-structures"
+}
