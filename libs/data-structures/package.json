@@ -1,6 +1,6 @@
 {
   "name": "@lndsld/data-structures",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "",
   "main": "lib/commonjs/index.js",
   "module": "lib/esm/index.js",
@@ -23,9 +23,9 @@
     "@types/heft-jest": "~1.0.3",
     "@types/node": "~13.11.1",
     "@types/object-hash": "~2.2.1",
+    "eslint": "~8.12.0",
     "plop": "~2.6.0",
-    "tsd": "~0.22.0",
-    "eslint": "~8.12.0"
+    "tsd": "~0.22.0"
   },
   "tsd": {
     "directory": "src"
