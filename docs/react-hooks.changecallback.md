@@ -9,5 +9,5 @@ Callback, invoked on value change
 <b>Signature:</b>
 
 ```typescript
-export declare type ChangeCallback<T> = (current: T, previous: T | undefined) => void;
+export declare type ChangeCallback<T> = (current: T, previous: T) => void;
 ```

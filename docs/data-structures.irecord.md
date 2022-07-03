@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-IRecord: IRecord.API
+IRecord: typeof methods
 ```

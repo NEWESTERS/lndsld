@@ -1,6 +1,13 @@
 # Change Log - @lndsld/data-structures
 
-This log was last generated on Sat, 02 Jul 2022 15:15:48 GMT and should not be manually modified.
+This log was last generated on Sun, 03 Jul 2022 20:30:25 GMT and should not be manually modified.
+
+## 0.2.2
+Sun, 03 Jul 2022 20:30:25 GMT
+
+### Patches
+
+- Default value for second generic argumaent of `IRecord.modify`
 
 ## 0.2.1
 Sat, 02 Jul 2022 15:15:48 GMT

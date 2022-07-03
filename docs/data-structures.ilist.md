@@ -7,5 +7,22 @@
 <b>Signature:</b>
 
 ```typescript
-IList: IList.API
+IList: {
+    create: typeof methods.create;
+    filter: typeof methods.filter;
+    removeIndex: typeof methods.removeIndex;
+    sort: typeof methods.sort;
+    push<T>(item: T): import("@lndsld/fp").Transform<readonly T[], readonly T[]>;
+    pop<T_1>(stack: readonly T_1[]): readonly T_1[];
+    find: {
+        <A, B extends A>(predicate: import("@lndsld/fp").TypeGuard<A, B>): import("@lndsld/fp").Transform<readonly A[], B | undefined>;
+        (predicate: import("@lndsld/fp").Predicate<unknown>): <T_2>(stack: readonly T_2[]) => T_2 | undefined;
+        <A_1>(predicate: import("@lndsld/fp").Predicate<A_1>): import("@lndsld/fp").Transform<readonly A_1[], A_1 | undefined>;
+    };
+    has<T_3>(item: T_3): import("@lndsld/fp").Transform<readonly T_3[], boolean>;
+    getLength(stack: readonly unknown[]): number;
+    getLast<T_4>(stack: readonly T_4[]): T_4 | undefined;
+    concat<A_2>(stackA: readonly A_2[]): <B_1>(stackB: readonly B_1[]) => readonly (A_2 | B_1)[];
+    map<A_3, B_2>(callback: (item: A_3, index: number) => B_2): import("@lndsld/fp").Transform<readonly A_3[], readonly B_2[]>;
+}
 ```

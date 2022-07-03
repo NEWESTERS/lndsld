@@ -20,6 +20,7 @@ Library with reusable React hooks
 |  [usePointerEvent(eventType, handler, options)](./react-hooks.usepointerevent_2.md) |  |
 |  [usePortalRoot()](./react-hooks.useportalroot.md) | Create root for React portal |
 |  [usePrevious(value)](./react-hooks.useprevious.md) | Get value from previous render |
+|  [usePrevious(value, initialValue)](./react-hooks.useprevious_1.md) |  |
 |  [usePropState(prop)](./react-hooks.usepropstate.md) | Create state from prop<!-- -->This state will by synced with prop |
 |  [useThrottledCallback(callback, timeout)](./react-hooks.usethrottledcallback.md) | Throttle callback<!-- -->Reduce frequency of callback invocations |
 |  [useToggle(value)](./react-hooks.usetoggle.md) | Create boolean toggle |

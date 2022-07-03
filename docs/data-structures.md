@@ -54,6 +54,7 @@
 |  [AnyKey](./data-structures.anykey.md) |  |
 |  [IDictionary](./data-structures.idictionary.md) |  |
 |  [IList](./data-structures.ilist.md) |  |
+|  [IRecord](./data-structures.irecord.md) |  |
 |  [ISet](./data-structures.iset.md) |  |
 |  [IStack](./data-structures.istack.md) |  |
 

@@ -2,6 +2,18 @@
   "name": "@lndsld/data-structures",
   "entries": [
     {
+      "version": "0.2.2",
+      "tag": "@lndsld/data-structures_v0.2.2",
+      "date": "Sun, 03 Jul 2022 20:30:25 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Default value for second generic argumaent of `IRecord.modify`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.2.1",
       "tag": "@lndsld/data-structures_v0.2.1",
       "date": "Sat, 02 Jul 2022 15:15:48 GMT",
