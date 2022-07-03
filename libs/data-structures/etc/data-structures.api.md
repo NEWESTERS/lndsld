@@ -29,8 +29,10 @@ function getKeys<T extends AnyKey>(record: IRecord<T>): T[];
 // @public (undocumented)
 export function hash(item: unknown): string;
 
+// Warning: (ae-forgotten-export) The symbol "HasKeyPredicate" needs to be exported by the entry point index.d.ts
+//
 // @public (undocumented)
-function hasKey<T extends AnyKey>(key: T): (record: object) => record is IRecord<T>;
+function hasKey<K extends AnyKey>(key: K): HasKeyPredicate<K>;
 
 // @public (undocumented)
 export type IDictionary<T = unknown> = Record<AnyKey, T>;
@@ -182,7 +184,7 @@ export namespace IOrderedTree {
 export const IOrderedTree: IOrderedTree.API;
 
 // @public (undocumented)
-export type IRecord<K extends AnyKey = AnyKey, V = unknown> = Readonly<Record<K, V>>;
+export type IRecord<K extends AnyKey = AnyKey, V = unknown> = Record<K, V>;
 
 // @public (undocumented)
 export namespace IRecord {
@@ -304,21 +306,23 @@ export namespace ITree {
 // @public (undocumented)
 export const ITree: ITree.API;
 
+// Warning: (ae-forgotten-export) The symbol "ModifyTransform" needs to be exported by the entry point index.d.ts
+//
 // @public (undocumented)
-function modify<K extends AnyKey, V1, V2>(key: K, callback: Transform<V1, V2>): <R extends IRecord<K, V1>>(record: R) => V1 extends V2 ? R : IRecord.OverrideProperty<R, K, V2>;
+function modify<K extends AnyKey, V1, V2 = V1>(key: K, callback: Transform<V1, V2>): ModifyTransform<K, V1, V2>;
 
 // @public
 function removeIndex(index: number): <T>(list: IList<T>) => IList<T>;
 
+// Warning: (ae-forgotten-export) The symbol "RemoveKeyTransform" needs to be exported by the entry point index.d.ts
+//
 // @public (undocumented)
-function removeKey<K extends AnyKey>(key: K): <R extends {}>(record: R) => K extends keyof R ? Readonly<Omit<R, K>> : R;
+function removeKey<K extends AnyKey>(key: K): RemoveKeyTransform<K>;
 
+// Warning: (ae-forgotten-export) The symbol "SetTransform" needs to be exported by the entry point index.d.ts
+//
 // @public (undocumented)
-function set<K extends AnyKey, V>(key: K, value: V): {
-    <R extends IRecord<K, V>>(record: R): R;
-    <R extends IRecord<K>>(record: R): IRecord.OverrideProperty<R, K, V>;
-    <R extends IRecord>(record: R): IRecord.AddProperty<R, K, V>;
-};
+function set<K extends AnyKey, V>(key: K, value: V): SetTransform<K, V>;
 
 // @public
 function sort<A>(comparator: (itemA: A, itemB: A) => number): Transform<IList<A>>;
