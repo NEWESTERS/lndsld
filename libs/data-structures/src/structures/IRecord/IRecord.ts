@@ -1,7 +1,7 @@
 import { AnyKey } from '../../types';
 import * as methods from './methods';
 
-type IRecord<K extends AnyKey = AnyKey, V = unknown> = Record<K, V>;
+type IRecord<K extends AnyKey = never, V = unknown> = Readonly<Record<K, V>>;
 
 declare namespace IRecord {
 	export type AddProperty<R extends IRecord, K extends AnyKey, V> = K extends keyof R

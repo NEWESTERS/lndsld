@@ -7,8 +7,10 @@ type RemoveKeyTransform<K extends AnyKey> = <R extends IRecord>(
 ) => R extends IRecord<K> ? Omit<R, K> : R;
 
 function removeKey<K extends AnyKey>(key: K): RemoveKeyTransform<K> {
+	const hasCurrentKey = hasKey(key);
+
 	return ((record) => {
-		if (!hasKey(key)(record)) {
+		if (!hasCurrentKey(record)) {
 			return record;
 		}
 

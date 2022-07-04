@@ -1,4 +1,5 @@
-import { expectType, expectError } from 'tsd';
+import { pipe } from '@lndsld/fp';
+import { expectType } from 'tsd';
 
 import IRecord from '../../IRecord';
 
@@ -8,6 +9,6 @@ interface SourceType {
 
 const rec: SourceType = { foo: 1 };
 
-expectType<number>(IRecord.get('foo')(rec));
+expectType<number>(pipe(rec, IRecord.get('foo')));
 
-expectError(IRecord.get('bar')(rec));
+expectType<unknown>(IRecord.get('bar')(rec));

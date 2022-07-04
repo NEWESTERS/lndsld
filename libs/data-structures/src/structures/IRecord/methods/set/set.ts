@@ -1,5 +1,6 @@
 import { AnyKey } from '../../../../types';
 import type IRecord from '../../IRecord';
+import get from '../get/get';
 
 type SetTransform<K extends AnyKey, V> = <R extends IRecord>(
 	record: R
@@ -10,8 +11,10 @@ type SetTransform<K extends AnyKey, V> = <R extends IRecord>(
 	: IRecord.AddProperty<R, K, V>;
 
 function set<K extends AnyKey, V>(key: K, value: V): SetTransform<K, V> {
+	const getCurrent = get(key);
+
 	return ((record) => {
-		if (record[key] === value) {
+		if (getCurrent(record) === value) {
 			return record;
 		}
 

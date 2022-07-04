@@ -1,8 +1,9 @@
+import { pipe } from '@lndsld/fp';
 import { expectType, expectNotType } from 'tsd';
 
 import IRecord from '../../IRecord';
 
-expectType<Array<'foo' | 'bar'>>(IRecord.getKeys({ foo: 1, bar: false }));
+expectType<Array<'foo' | 'bar'>>(pipe({ foo: 1, bar: false }, IRecord.getKeys));
 
 expectNotType<string[]>(IRecord.getKeys({ foo: 1, bar: false }));
 

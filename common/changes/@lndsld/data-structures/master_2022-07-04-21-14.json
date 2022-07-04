@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lndsld/data-structures",
+      "comment": "`IRecord` type refinements",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@lndsld/data-structures"
+}
