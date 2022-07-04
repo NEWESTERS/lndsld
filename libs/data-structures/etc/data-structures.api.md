@@ -21,7 +21,7 @@ function filter<A, B extends A>(predicate: TypeGuard<A, B>): Transform<IList<A>,
 function filter<A>(predicate: Predicate<A>): Transform<IList<A>, IList<A>>;
 
 // @public (undocumented)
-function get<K extends AnyKey>(key: K): <R extends IRecord<K>>(record: R) => R[K];
+function get<K extends AnyKey>(key: K): <R extends IRecord>(record: R) => R extends IRecord<K> ? R[K] : unknown;
 
 // @public (undocumented)
 function getKeys<T extends AnyKey>(record: IRecord<T>): T[];
@@ -184,7 +184,7 @@ export namespace IOrderedTree {
 export const IOrderedTree: IOrderedTree.API;
 
 // @public (undocumented)
-export type IRecord<K extends AnyKey = AnyKey, V = unknown> = Record<K, V>;
+export type IRecord<K extends AnyKey = never, V = unknown> = Readonly<Record<K, V>>;
 
 // @public (undocumented)
 export namespace IRecord {
@@ -310,6 +310,16 @@ export const ITree: ITree.API;
 //
 // @public (undocumented)
 function modify<K extends AnyKey, V1, V2 = V1>(key: K, callback: Transform<V1, V2>): ModifyTransform<K, V1, V2>;
+
+// Warning: (ae-forgotten-export) The symbol "OmitTransform" needs to be exported by the entry point index.d.ts
+//
+// @public (undocumented)
+function omit<T extends AnyKey>(keys: T[]): OmitTransform<T>;
+
+// Warning: (ae-forgotten-export) The symbol "PickTransform" needs to be exported by the entry point index.d.ts
+//
+// @public (undocumented)
+function pick<T extends AnyKey>(keys: T[]): PickTransform<T>;
 
 // @public
 function removeIndex(index: number): <T>(list: IList<T>) => IList<T>;

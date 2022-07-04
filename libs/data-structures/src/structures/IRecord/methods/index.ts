@@ -11,3 +11,7 @@ export { default as modify } from './modify/modify';
 export { default as removeKey } from './removeKey/removeKey';
 
 export { default as set } from './set/set';
+
+export { default as pick } from './pick/pick';
+
+export { default as omit } from './omit/omit';

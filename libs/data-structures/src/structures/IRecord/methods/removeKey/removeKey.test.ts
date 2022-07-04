@@ -9,7 +9,7 @@ describe('IRecord.removeKey', () => {
 		const rec2 = pipe(rec1, IRecord.removeKey('bar'));
 
 		expect(IRecord.hasKey('bar')(rec2)).toBe(false);
-		expect(IRecord.hasKey('foo')).toBe(true);
+		expect(IRecord.hasKey('foo')(rec2)).toBe(true);
 	});
 
 	it('returns original record if key does not exist', () => {
