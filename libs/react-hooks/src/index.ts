@@ -43,3 +43,5 @@ export type { UseResizeOptions } from './useResize';
 
 export { default as useScroll } from './useScroll';
 export type { UseScrollOptions } from './useScroll';
+
+export { default as useDomRect } from './useDomRect';

@@ -3,9 +3,13 @@ import { RefObject, useEffect } from 'react';
 import { EventCallback } from './types';
 import useEvent from './useEvent';
 
+/**
+ * Configuration options for `useScroll` hook
+ * @public
+ */
 export interface UseScrollOptions {
 	/**
-	 * Use capture phase of event
+	 * Use capture phase of event§
 	 */
 	capture?: boolean;
 	/**
@@ -24,7 +28,10 @@ export interface UseScrollOptions {
 	ref?: RefObject<HTMLElement>;
 }
 
-/** Subscribe to scroll events */
+/**
+ * Subscribe to scroll events
+ * @public
+ */
 function useScroll(handler: EventCallback<[Event]>, options: UseScrollOptions = {}): void {
 	const { capture, passive, disabled, ref } = options;
 

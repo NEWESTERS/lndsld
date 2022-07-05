@@ -59,6 +59,9 @@ export const useClickOutside: <T extends HTMLElement = HTMLElement>(callback: Ev
 export function useDebouncedCallback<P extends unknown[]>(callback: EventCallback<P>, delay?: number): EventCallback<P>;
 
 // @public
+export function useDomRect(ref: RefObject<HTMLElement>): DOMRect | undefined;
+
+// @public
 export function useEvent<P extends unknown[]>(callback: EventCallback<P>): EventCallback<P>;
 
 // @public
@@ -106,6 +109,18 @@ export interface UseResizeOptions {
 
 // @public
 export type UserSelectType = 'none' | 'auto' | 'text' | 'contain' | 'all';
+
+// @public
+export function useScroll(handler: EventCallback<[Event]>, options?: UseScrollOptions): void;
+
+// @public
+export interface UseScrollOptions {
+    capture?: boolean;
+    disabled?: boolean;
+    // (undocumented)
+    passive?: boolean;
+    ref?: RefObject<HTMLElement>;
+}
 
 // @public
 export function useThrottledCallback<P extends unknown[]>(callback: EventCallback<P>, timeout: number): EventCallback<P>;

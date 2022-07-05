@@ -1,10 +1,7 @@
 import { RefObject, useEffect, useState } from 'react';
 
 import useEvent from './useEvent';
-
-function getDOMRect(ref: RefObject<HTMLElement>): DOMRect | undefined {
-	return ref.current?.getBoundingClientRect();
-}
+import { getDOMRect } from './utils';
 
 /**
  * Configuration options for `useResize` hook
