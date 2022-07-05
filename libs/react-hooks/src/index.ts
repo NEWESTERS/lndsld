@@ -35,3 +35,5 @@ export type { UserSelectType, UseUserSelectOptions } from './useUserSelect';
 
 export { default as usePointerEvent } from './usePointerEvent';
 export type { UsePointerEventOptions } from './usePointerEvent';
+
+export { default as useWindowSize } from './useWindowSize';

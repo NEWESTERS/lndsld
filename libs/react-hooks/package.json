@@ -8,6 +8,10 @@
   "scripts": {
     "build": "heft build --clean"
   },
+  "dependencies": {
+    "@lndsld/math": "workspace:*",
+    "@lndsld/fp": "workspace:*"
+  },
   "devDependencies": {
     "@lndsld/eslint-config": "workspace:*",
     "@lndsld/heft-library-rig": "workspace:*",

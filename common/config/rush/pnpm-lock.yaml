@@ -148,12 +148,17 @@ importers:
   ../../libs/react-hooks:
     specifiers:
       '@lndsld/eslint-config': workspace:*
+      '@lndsld/fp': workspace:*
       '@lndsld/heft-library-rig': workspace:*
+      '@lndsld/math': workspace:*
       '@rushstack/heft': ~0.45.8
       '@types/react': ~18.0.12
       eslint: ~8.12.0
       eslint-plugin-react-hooks: ~4.6.0
       react: '>= 17'
+    dependencies:
+      '@lndsld/fp': link:../fp
+      '@lndsld/math': link:../math
     devDependencies:
       '@lndsld/eslint-config': link:../../configs/eslint-config
       '@lndsld/heft-library-rig': link:../../configs/heft-library-rig
