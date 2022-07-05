@@ -17,7 +17,7 @@ import useEvent from './useEvent';
  */
 export interface UsePointerEventOptions<E extends HTMLElement> {
 	/**
-	 * Ref to element, which events will should be listened
+	 * Ref to element, which events will be listened
 	 * @defaultValue ref to `document`
 	 */
 	ref?: RefObject<E>;

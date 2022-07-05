@@ -40,3 +40,6 @@ export { default as useWindowSize } from './useWindowSize';
 
 export { default as useResize } from './useResize';
 export type { UseResizeOptions } from './useResize';
+
+export { default as useScroll } from './useScroll';
+export type { UseScrollOptions } from './useScroll';

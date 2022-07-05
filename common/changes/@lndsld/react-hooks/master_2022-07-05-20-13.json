@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lndsld/react-hooks",
+      "comment": "`useScroll` hook implemented",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@lndsld/react-hooks"
+}
