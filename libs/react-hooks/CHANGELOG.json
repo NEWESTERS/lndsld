@@ -2,6 +2,27 @@
   "name": "@lndsld/react-hooks",
   "entries": [
     {
+      "version": "0.4.0",
+      "tag": "@lndsld/react-hooks_v0.4.0",
+      "date": "Tue, 05 Jul 2022 20:30:37 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "`useWindowSize` hook implemented"
+          },
+          {
+            "comment": "`useResize` hook implemented"
+          },
+          {
+            "comment": "`useScroll` hook implemented"
+          },
+          {
+            "comment": "`useDomRect` hook implemented"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.3.0",
       "tag": "@lndsld/react-hooks_v0.3.0",
       "date": "Sun, 26 Jun 2022 20:55:06 GMT",

@@ -2,6 +2,23 @@
   "name": "@lndsld/data-structures",
   "entries": [
     {
+      "version": "0.3.0",
+      "tag": "@lndsld/data-structures_v0.3.0",
+      "date": "Tue, 05 Jul 2022 20:30:37 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "`IRecord` type refinements"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "Add `IRecord` `pick` and `omit` methods"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.2.2",
       "tag": "@lndsld/data-structures_v0.2.2",
       "date": "Sun, 03 Jul 2022 20:30:25 GMT",
