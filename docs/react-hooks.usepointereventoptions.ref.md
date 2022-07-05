@@ -4,7 +4,7 @@
 
 ## UsePointerEventOptions.ref property
 
-Ref to element, which events will should be listened
+Ref to element, which events will be listened
 
 <b>Signature:</b>
 

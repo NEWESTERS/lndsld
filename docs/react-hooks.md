@@ -12,6 +12,7 @@ Library with reusable React hooks
 |  --- | --- |
 |  [useChange(observer, observable)](./react-hooks.usechange.md) | Subscribe to value changes (like <code>componentDidUpdate</code> from class components) |
 |  [useDebouncedCallback(callback, delay)](./react-hooks.usedebouncedcallback.md) | Apply debounce to callback<!-- -->If callback wasn't invoked during specified time, last call will be invoked |
+|  [useDomRect(ref)](./react-hooks.usedomrect.md) | Subscribe to changes of element's <code>DOMRect</code> |
 |  [useEvent(callback)](./react-hooks.useevent.md) | Get stable reference to event handler |
 |  [useForwardedRef(forwardedRef)](./react-hooks.useforwardedref.md) | Make proxy for <code>ForwardedRef</code> |
 |  [useInterval(callback, initialDelay)](./react-hooks.useinterval.md) | Let callback automatically run with specified time interval |
@@ -22,9 +23,12 @@ Library with reusable React hooks
 |  [usePrevious(value)](./react-hooks.useprevious.md) | Get value from previous render |
 |  [usePrevious(value, initialValue)](./react-hooks.useprevious_1.md) |  |
 |  [usePropState(prop)](./react-hooks.usepropstate.md) | Create state from prop<!-- -->This state will by synced with prop |
+|  [useResize(ref, options)](./react-hooks.useresize.md) | Subscribe to element's resize |
+|  [useScroll(handler, options)](./react-hooks.usescroll.md) | Subscribe to scroll events |
 |  [useThrottledCallback(callback, timeout)](./react-hooks.usethrottledcallback.md) | Throttle callback<!-- -->Reduce frequency of callback invocations |
 |  [useToggle(value)](./react-hooks.usetoggle.md) | Create boolean toggle |
 |  [useUserSelect(value, options)](./react-hooks.useuserselect.md) | Sets <code>user-select</code> CSS property |
+|  [useWindowSize()](./react-hooks.usewindowsize.md) | Subscribe to changes of browser window's <code>width</code> and <code>height</code> |
 
 ## Interfaces
 
@@ -33,6 +37,8 @@ Library with reusable React hooks
 |  [IntervalAPI](./react-hooks.intervalapi.md) | Declaration of API to control interval |
 |  [ToggleAdditionalAPI](./react-hooks.toggleadditionalapi.md) | Declaration of additional API for toggle |
 |  [UsePointerEventOptions](./react-hooks.usepointereventoptions.md) | Configuration options for <code>usePointerEvent</code> hook |
+|  [UseResizeOptions](./react-hooks.useresizeoptions.md) | Configuration options for <code>useResize</code> hook |
+|  [UseScrollOptions](./react-hooks.usescrolloptions.md) | Configuration options for <code>useScroll</code> hook |
 |  [UseUserSelectOptions](./react-hooks.useuserselectoptions.md) | Configuration options for <code>useUserSelect</code> hook |
 
 ## Variables

@@ -18,5 +18,5 @@ export interface UsePointerEventOptions<E extends HTMLElement>
 |  --- | --- | --- |
 |  [disabled?](./react-hooks.usepointereventoptions.disabled.md) | boolean | <i>(Optional)</i> If <code>true</code>, event listener will not be added |
 |  [passive?](./react-hooks.usepointereventoptions.passive.md) | boolean | <i>(Optional)</i> |
-|  [ref?](./react-hooks.usepointereventoptions.ref.md) | RefObject&lt;E&gt; | <i>(Optional)</i> Ref to element, which events will should be listened |
+|  [ref?](./react-hooks.usepointereventoptions.ref.md) | RefObject&lt;E&gt; | <i>(Optional)</i> Ref to element, which events will be listened |
 
