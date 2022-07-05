@@ -37,3 +37,6 @@ export { default as usePointerEvent } from './usePointerEvent';
 export type { UsePointerEventOptions } from './usePointerEvent';
 
 export { default as useWindowSize } from './useWindowSize';
+
+export { default as useResize } from './useResize';
+export type { UseResizeOptions } from './useResize';

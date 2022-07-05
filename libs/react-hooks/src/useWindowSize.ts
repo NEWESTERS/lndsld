@@ -6,7 +6,10 @@ function getWindowSize(): IVector2 {
 	return IVector2.create(window.innerWidth, window.innerHeight);
 }
 
-/** Subscribe to changes of browser window's `width` and `height` */
+/**
+ * Subscribe to changes of browser window's `width` and `height`
+ * @public
+ */
 function useWindowSize(): IVector2 {
 	const [windowSize, setWindowSize] = useState<IVector2>(getWindowSize);
 

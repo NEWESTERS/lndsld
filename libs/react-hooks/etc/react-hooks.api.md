@@ -6,6 +6,7 @@
 
 import { Dispatch } from 'react';
 import { ForwardedRef } from 'react';
+import { IVector2 } from '@lndsld/math';
 import { RefObject } from 'react';
 import { SetStateAction } from 'react';
 
@@ -96,6 +97,14 @@ export function usePrevious<T, I>(value: T, initialValue: I): T | I;
 export function usePropState<T>(prop: T): [T, Dispatch<SetStateAction<T>>];
 
 // @public
+export function useResize(ref: RefObject<HTMLElement>, options?: UseResizeOptions): DOMRect | undefined;
+
+// @public
+export interface UseResizeOptions {
+    onResize?: ResizeObserverCallback;
+}
+
+// @public
 export type UserSelectType = 'none' | 'auto' | 'text' | 'contain' | 'all';
 
 // @public
@@ -111,5 +120,8 @@ export function useUserSelect<E extends HTMLElement>(value: UserSelectType | boo
 export interface UseUserSelectOptions<E extends HTMLElement> {
     ref?: RefObject<E>;
 }
+
+// @public
+export function useWindowSize(): IVector2;
 
 ```
