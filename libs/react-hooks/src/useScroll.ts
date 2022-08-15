@@ -42,7 +42,7 @@ function useScroll(handler: EventCallback<[Event]>, options: UseScrollOptions = 
 			return;
 		}
 
-		const element = ref?.current ?? document.body;
+		const element = ref?.current ?? document;
 
 		element.addEventListener('scroll', handleScroll, { capture, passive });
 
