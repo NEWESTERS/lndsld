@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lndsld/heft-library-rig",
+      "comment": "Added CLI test coverage reporting",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@lndsld/heft-library-rig"
+}

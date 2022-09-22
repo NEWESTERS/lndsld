@@ -1,3 +1,10 @@
 {
-    "extends": "@rushstack/heft-jest-plugin/includes/jest-shared.config.json"
+    "extends": "@rushstack/heft-jest-plugin/includes/jest-shared.config.json",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+        "**/*.{ts,tsx}",
+        "!**/index.{ts,tsx}",
+        "!**/node_modules/**"
+    ],
+    "coverageReporters": ["text", "text-summary"]
 }
