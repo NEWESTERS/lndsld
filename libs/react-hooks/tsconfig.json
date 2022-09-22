@@ -3,7 +3,8 @@
     "compilerOptions": {
         "outDir": "lib/esm",
         "declarationDir": "temp/types",
-        "lib": ["ESNext", "DOM"]
+        "lib": ["ESNext", "DOM"],
+        "types": ["heft-jest"]
     },
     "include": ["src"],
 }

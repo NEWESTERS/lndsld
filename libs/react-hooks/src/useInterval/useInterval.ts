@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef } from 'react';
 
-import { EventCallback } from './types';
-import useEvent from './useEvent';
+import { useEvent } from '../useEvent';
+import { EventCallback } from '../types';
 
 /**
  * Declaration of API to control interval
@@ -25,10 +25,7 @@ export interface IntervalAPI {
  * @returns interval API
  * @public
  */
-function useInterval(
-	callback: EventCallback<[]>,
-	initialDelay?: number
-): IntervalAPI {
+function useInterval(callback: EventCallback<[]>, initialDelay?: number): IntervalAPI {
 	const timerRef = useRef<number>();
 	const onTick = useEvent(callback);
 
@@ -57,7 +54,7 @@ function useInterval(
 
 	return {
 		start,
-		stop,
+		stop
 	};
 }
 

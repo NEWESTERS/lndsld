@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lndsld/react-hooks",
+      "comment": "Configured and added tests for hooks",
+      "type": "none"
+    }
+  ],
+  "packageName": "@lndsld/react-hooks"
+}

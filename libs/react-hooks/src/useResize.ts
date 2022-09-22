@@ -1,6 +1,6 @@
 import { RefObject, useEffect, useState } from 'react';
 
-import useEvent from './useEvent';
+import { useEvent } from './useEvent';
 import { getDOMRect } from './utils';
 
 /**

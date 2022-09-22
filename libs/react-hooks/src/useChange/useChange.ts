@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
-import useEvent from './useEvent';
-import usePrevious from './usePrevious';
+import { useEvent } from '../useEvent';
+import { usePrevious } from '../usePrevious';
 
 /**
  * Callback, invoked on value change

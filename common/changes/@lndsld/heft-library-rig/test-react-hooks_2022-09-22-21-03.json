@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lndsld/heft-library-rig",
+      "comment": "`jest-environment-jsdom` version downgrade",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@lndsld/heft-library-rig"
+}

@@ -1,7 +1,7 @@
 import { RefObject, useEffect } from 'react';
 
+import { useEvent } from './useEvent';
 import { EventCallback } from './types';
-import useEvent from './useEvent';
 
 /**
  * Configuration options for `useScroll` hook
