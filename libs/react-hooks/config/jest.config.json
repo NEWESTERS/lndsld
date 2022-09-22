@@ -1,0 +1,5 @@
+{
+    "extends": "@lndsld/heft-library-rig/profiles/default/config/jest.config.json",
+    "testEnvironment": "jsdom",
+    "testEnvironmentOptions": {}
+}

@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 
-import usePropState from './usePropState';
+import { usePropState } from '../usePropState';
 
 /**
  * Declaration of additional API for toggle
@@ -19,9 +19,7 @@ export interface ToggleAdditionalAPI {
  * @returns current toggle value, function to invert it and additional API
  * @public
  */
-function useToggle(
-	value: boolean = false
-): [boolean, () => void, ToggleAdditionalAPI] {
+function useToggle(value: boolean = false): [boolean, () => void, ToggleAdditionalAPI] {
 	const [isActive, setIsActive] = usePropState(value);
 
 	const activate = useCallback(() => {
@@ -41,8 +39,8 @@ function useToggle(
 		toggle,
 		{
 			activate,
-			deactivate,
-		},
+			deactivate
+		}
 	];
 }
 

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef } from 'react';
 
-import { EventCallback } from './types';
+import { EventCallback } from '../types';
 
 /**
  * Get stable reference to event handler

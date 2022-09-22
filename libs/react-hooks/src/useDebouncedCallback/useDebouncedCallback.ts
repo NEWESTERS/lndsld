@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef } from 'react';
 
-import { EventCallback } from './types';
-import useEvent from './useEvent';
+import { useEvent } from '../useEvent';
+import { EventCallback } from '../types';
 
 /**
  * Apply debounce to callback

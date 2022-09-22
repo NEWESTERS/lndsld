@@ -5,30 +5,27 @@
 
 export * from './types';
 
-export { default as useChange } from './useChange';
-export type { ChangeCallback } from './useChange';
+export * from './usePrevious';
 
-export { default as useEvent } from './useEvent';
+export * from './useChange';
 
-export { default as usePrevious } from './usePrevious';
+export * from './useEvent';
 
-export { default as useDebouncedCallback } from './useDebouncedCallback';
+export * from './useDebouncedCallback';
 
-export { default as usePropState } from './usePropState';
+export * from './usePortalRoot';
 
-export { default as useToggle } from './useToggle';
-export type { ToggleAdditionalAPI } from './useToggle';
+export * from './useToggle';
 
-export { default as useThrottledCallback } from './useThrottledCallback';
+export * from './usePropState';
+
+export * from './useInterval';
+
+export * from './useThrottledCallback';
 
 export { default as useForwardedRef } from './useForwardedRef';
 
-export { default as useInterval } from './useInterval';
-export type { IntervalAPI } from './useInterval';
-
 export { default as useClickOutside } from './useClickOutside';
-
-export { default as usePortalRoot } from './usePortalRoot';
 
 export { default as useUserSelect } from './useUserSelect';
 export type { UserSelectType, UseUserSelectOptions } from './useUserSelect';

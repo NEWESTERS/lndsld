@@ -6,7 +6,8 @@
   "module": "lib/esm/index.js",
   "types": "lib/react-hooks.d.ts",
   "scripts": {
-    "build": "heft build --clean"
+    "build": "heft build --clean",
+    "test": "heft test --watch"
   },
   "dependencies": {
     "@lndsld/fp": "workspace:*",
@@ -16,10 +17,13 @@
     "@lndsld/eslint-config": "workspace:*",
     "@lndsld/heft-library-rig": "workspace:*",
     "@rushstack/heft": "~0.45.8",
-    "@types/react": "~18.0.12",
+    "@types/react": "~17.0.50",
+    "@types/heft-jest": "~1.0.3",
     "eslint": "~8.12.0",
     "eslint-plugin-react-hooks": "~4.6.0",
-    "react": ">= 17"
+    "react": "~17.0.2",
+    "@testing-library/react-hooks": "~8.0.1",
+    "react-test-renderer": "^17"
   },
   "peerDependencies": {
     "react": ">= 17"

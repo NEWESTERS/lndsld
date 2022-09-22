@@ -1,5 +1,6 @@
 import { RefObject, useLayoutEffect } from 'react';
 
+import { useEvent } from './useEvent';
 import {
 	MouseEventType,
 	NativeMouseEventHandler,
@@ -9,7 +10,6 @@ import {
 	NativePointerEventHandler,
 	NativeEventHandler
 } from './types';
-import useEvent from './useEvent';
 
 /**
  * Configuration options for `usePointerEvent` hook
