@@ -20,6 +20,7 @@
     "@types/jest": "~27.4.1",
     "jest": "~27.5.1",
     "jest-runner-tsd": "~3.0.0",
-    "tsd-lite": "~0.5.3"
+    "tsd-lite": "~0.5.3",
+    "eslint": "~8.12.0"
   }
 }
