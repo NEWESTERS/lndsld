@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lndsld/fp",
+      "comment": "Implemented `mapDefined` function",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@lndsld/fp"
+}
