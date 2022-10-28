@@ -4,9 +4,16 @@ import { IRange2 } from '../../immutable';
 
 /**
  * Clamp value in range
+ * @param range - target range
  * @public
  */
 function clamp(range: IRange2): Transform<number>;
+/**
+ * Clamp value in range
+ * @param min - start of target range
+ * @param max - end of target range
+ * @public
+ */
 function clamp(min: number, max: number): Transform<number>;
 function clamp(...parameters: [IRange2] | [number, number]): Transform<number> {
 	let min: number;

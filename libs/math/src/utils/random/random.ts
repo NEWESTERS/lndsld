@@ -5,9 +5,16 @@ const MATH_RANDOM_RANGE: IRange2 = IRange2.create(0, 1);
 
 /**
  * Returns random value from specified range
+ * @param range - target range
  * @public
  */
 function random(range: IRange2): number;
+/**
+ * Returns random value from specified range
+ * @param min - start of target range
+ * @param max - end of target range
+ * @public
+ */
 function random(min: number, max: number): number;
 function random(...parameters: [IRange2] | [number, number]): number {
 	const range = IRange2.isRange(parameters[0])
