@@ -73,10 +73,10 @@ export function useInterval(callback: EventCallback<[]>, initialDelay?: number):
 // @public
 export function usePointerEvent<E extends HTMLElement>(eventType: MouseEventType, handler: NativeMouseEventHandler, options?: UsePointerEventOptions<E>): void;
 
-// @public (undocumented)
+// @public
 export function usePointerEvent<E extends HTMLElement>(eventType: TouchEventType, handler: NativeTouchEventHandler, options?: UsePointerEventOptions<E>): void;
 
-// @public (undocumented)
+// @public
 export function usePointerEvent<E extends HTMLElement>(eventType: PointerEventType, handler: NativePointerEventHandler, options?: UsePointerEventOptions<E>): void;
 
 // @public
@@ -93,7 +93,7 @@ export function usePortalRoot(): HTMLDivElement;
 // @public
 export function usePrevious<T>(value: T): T | undefined;
 
-// @public (undocumented)
+// @public
 export function usePrevious<T, I>(value: T, initialValue: I): T | I;
 
 // @public
