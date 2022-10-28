@@ -7,7 +7,7 @@
   "types": "lib/fp.d.ts",
   "scripts": {
     "build": "heft build --clean",
-    "test:impl": "heft test --no-build",
+    "test:impl": "heft test",
     "test:types": "jest -c jest.config.types.js",
     "test": "npm run test:impl && npm run test:types"
   },

@@ -2,7 +2,7 @@ import flow from './flow';
 
 const add1 = (a: number): number => a + 1;
 
-const sum = (a: number, b: number) => a + b;
+const sum = (a: number, b: number): number => a + b;
 
 describe('flow', () => {
 	it('works with 1 func', () => {

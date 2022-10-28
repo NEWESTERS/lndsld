@@ -9,7 +9,7 @@ import { Transform } from '@lndsld/fp';
 // @public
 export function clamp(range: IRange2): Transform<number>;
 
-// @public (undocumented)
+// @public
 export function clamp(min: number, max: number): Transform<number>;
 
 // @public
@@ -84,7 +84,7 @@ export class MVector2 implements Vector2 {
 // @public
 export function random(range: IRange2): number;
 
-// @public (undocumented)
+// @public
 export function random(min: number, max: number): number;
 
 // @public

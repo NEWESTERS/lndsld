@@ -33,9 +33,9 @@ export interface UsePointerEventOptions<E extends HTMLElement> {
 }
 
 /**
- * Subscribe to pointer events
- * @param eventType - type of pointer event to subscribe
- * @param handler - callback that will be invoked when pointer event dispatched
+ * Subscribe to mouse events
+ * @param eventType - type of mouse event to subscribe
+ * @param handler - callback that will be invoked when mouse event dispatched
  * @param options - configuration options for hook
  * @public
  */
@@ -44,11 +44,25 @@ function usePointerEvent<E extends HTMLElement>(
 	handler: NativeMouseEventHandler,
 	options?: UsePointerEventOptions<E>
 ): void;
+/**
+ * Subscribe to touch events
+ * @param eventType - type of touch event to subscribe
+ * @param handler - callback that will be invoked when touch event dispatched
+ * @param options - configuration options for hook
+ * @public
+ */
 function usePointerEvent<E extends HTMLElement>(
 	eventType: TouchEventType,
 	handler: NativeTouchEventHandler,
 	options?: UsePointerEventOptions<E>
 ): void;
+/**
+ * Subscribe to pointer events
+ * @param eventType - type of pointer event to subscribe
+ * @param handler - callback that will be invoked when pointer event dispatched
+ * @param options - configuration options for hook
+ * @public
+ */
 function usePointerEvent<E extends HTMLElement>(
 	eventType: PointerEventType,
 	handler: NativePointerEventHandler,

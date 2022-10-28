@@ -4,40 +4,40 @@
 
 ```ts
 
-// @public (undocumented)
+// @public
 export function doNothing<T>(value: T): T;
 
-// @public (undocumented)
+// @public
 export function flow<A extends Array<unknown>, B>(ab: (...a: A) => B): (...a: A) => B;
 
-// @public (undocumented)
+// @public
 export function flow<A extends Array<unknown>, B, C>(ab: (...a: A) => B, bc: (b: B) => C): (...a: A) => C;
 
-// @public (undocumented)
+// @public
 export function flow<A extends Array<unknown>, B, C, D>(ab: (...a: A) => B, bc: (b: B) => C, cd: (b: C) => D): (...a: A) => D;
 
-// @public (undocumented)
+// @public
 export function flow<A extends Array<unknown>, B, C, D, E>(ab: (...a: A) => B, bc: (b: B) => C, cd: (c: C) => D, de: (d: D) => E): (...a: A) => E;
 
-// @public (undocumented)
+// @public
 export function flow<A extends Array<unknown>, B, C, D, E, F>(ab: (...a: A) => B, bc: (b: B) => C, cd: (c: C) => D, de: (d: D) => E, ef: (d: E) => F): (...a: A) => F;
 
 // @public
 export function mapDefined<T1, T2>(transform: Transform<T1, T2>): Transform<T1 | undefined, T2 | undefined>;
 
-// @public (undocumented)
+// @public
 export function pipe<A, B>(a: A, ab: (a: A) => B): B;
 
-// @public (undocumented)
+// @public
 export function pipe<A, B, C>(a: A, ab: (a: A) => B, bc: (b: B) => C): C;
 
-// @public (undocumented)
+// @public
 export function pipe<A, B, C, D>(a: A, ab: (a: A) => B, bc: (b: B) => C, cd: (c: C) => D): D;
 
-// @public (undocumented)
+// @public
 export function pipe<A, B, C, D, E>(a: A, ab: (a: A) => B, bc: (b: B) => C, cd: (c: C) => D, de: (c: D) => E): E;
 
-// @public (undocumented)
+// @public
 export function pipe<A, B, C, D, E, F>(a: A, ab: (a: A) => B, bc: (b: B) => C, cd: (c: C) => D, de: (c: D) => E, ef: (e: E) => F): E;
 
 // @public
