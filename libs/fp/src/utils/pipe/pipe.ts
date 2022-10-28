@@ -1,9 +1,36 @@
-/* eslint-disable no-unused-expressions */
-/* eslint-disable @typescript-eslint/ban-types */
+/* eslint-disable no-unused-expressions, @typescript-eslint/ban-types */
+
+import { flow } from '../flow';
+
+/**
+ * Performs left to right function composition and invokes it on first argument
+ * @returns result of function composition invocation
+ * @public
+ */
 function pipe<A, B>(a: A, ab: (a: A) => B): B;
+/**
+ * Performs left to right function composition and invokes it on first argument
+ * @returns result of function composition invocation
+ * @public
+ */
 function pipe<A, B, C>(a: A, ab: (a: A) => B, bc: (b: B) => C): C;
+/**
+ * Performs left to right function composition and invokes it on first argument
+ * @returns result of function composition invocation
+ * @public
+ */
 function pipe<A, B, C, D>(a: A, ab: (a: A) => B, bc: (b: B) => C, cd: (c: C) => D): D;
+/**
+ * Performs left to right function composition and invokes it on first argument
+ * @returns result of function composition invocation
+ * @public
+ */
 function pipe<A, B, C, D, E>(a: A, ab: (a: A) => B, bc: (b: B) => C, cd: (c: C) => D, de: (c: D) => E): E;
+/**
+ * Performs left to right function composition and invokes it on first argument
+ * @returns result of function composition invocation
+ * @public
+ */
 function pipe<A, B, C, D, E, F>(
 	a: A,
 	ab: (a: A) => B,
@@ -15,17 +42,8 @@ function pipe<A, B, C, D, E, F>(
 ): E;
 
 function pipe(a: unknown, ab: Function, bc?: Function, cd?: Function, de?: Function, ef?: Function): unknown {
-	let result = ab(a);
-
-	bc && (result = bc(result));
-
-	cd && (result = cd(result));
-
-	de && (result = de(result));
-
-	ef && (result = ef(result));
-
-	return result;
+	// @ts-ignore
+	return flow(ab, bc, cd, de, ef)(a);
 }
 
 export default pipe;

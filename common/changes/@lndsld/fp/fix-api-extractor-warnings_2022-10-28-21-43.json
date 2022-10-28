@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lndsld/fp",
+      "comment": "Added documentation",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@lndsld/fp"
+}
