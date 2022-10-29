@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lndsld/webpack-config",
+      "comment": "Implemented react app config factory",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@lndsld/webpack-config"
+}
