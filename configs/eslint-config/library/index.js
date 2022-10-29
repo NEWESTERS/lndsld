@@ -6,6 +6,7 @@ module.exports = {
 	extends: [
 		'@rushstack/eslint-config/profile/node-trusted-tool',
 		'@rushstack/eslint-config/mixins/tsdoc',
+		'@rushstack/eslint-config/mixins/packlets',
 		'plugin:unicorn/recommended'
 	],
 	plugins: ['unicorn'],

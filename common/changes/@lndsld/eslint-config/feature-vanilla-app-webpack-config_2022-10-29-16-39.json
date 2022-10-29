@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lndsld/eslint-config",
+      "comment": "Added packlets mixin",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@lndsld/eslint-config"
+}

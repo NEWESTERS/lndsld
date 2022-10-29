@@ -428,6 +428,11 @@
       "packageName": "@lndsld/heft-library-rig",
       "projectFolder": "configs/heft-library-rig",
       "shouldPublish": true
+    },
+    {
+      "packageName": "vanilla-app",
+      "projectFolder": "examples/vanilla-app",
+      "shouldPublish": false
     }
     // {
     //   /**
