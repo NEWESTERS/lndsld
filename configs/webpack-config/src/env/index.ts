@@ -1,2 +1,3 @@
-export { default as resolveBuildEnv } from './resolveBuildEnv';
-export type { BuildEnv, BuildEnvCustomization } from './resolveBuildEnv';
+export { default as getPackageJson } from './getPackageJson';
+
+export { getTsCompilerOptions } from './getTsConfig';

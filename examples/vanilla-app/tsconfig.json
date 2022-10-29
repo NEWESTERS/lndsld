@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "lib": ["ESNext", "DOM"],
+        "module": "ESNext",
+        "target": "ESNext",
+        "esModuleInterop": true,
+        "strict": true
+    },
+    "include": ["src"]
+}

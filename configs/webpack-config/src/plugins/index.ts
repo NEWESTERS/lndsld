@@ -1,8 +1,8 @@
-export { externalsPlugin } from './externals';
-export type { ApplyExternalsOptions } from './externals';
+export { default as swcPlugin } from './swcPlugin';
+export type { SwcPluginOptions } from './swcPlugin';
 
-export { babelPlugin } from './babel';
-export type { ApplyBabelOptions } from './babel';
+export { default as htmlPlugin } from './htmlPlugin';
+export type { HtmlPluginOptions } from './htmlPlugin';
 
-export { libraryOutputPlugin } from './libraryOutput';
-export type { ApplyLibraryOutputOptions } from './libraryOutput';
+export { default as devServerPlugin } from './devServerPlugin';
+export type { DevServerOptions } from './devServerPlugin';

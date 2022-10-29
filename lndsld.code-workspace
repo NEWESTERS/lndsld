@@ -35,7 +35,11 @@
 		{
 			"name": "🏗 @lndsld/heft-library-rig",
 			"path": "configs/heft-library-rig",
-		  }
+		},
+		{
+			"name": "🎲 examples",
+			"path": "examples",
+		},
 	],
 	"settings": {
 		"typescript.tsdk": "common/temp/node_modules/typescript/lib"

@@ -1,4 +1,4 @@
-export interface PackageJson {
+interface PackageJson {
 	name: string;
 	version: string;
 	main?: string;
@@ -6,3 +6,5 @@ export interface PackageJson {
 	devDependencies?: Record<string, string>;
 	peerDependencies?: Record<string, string>;
 }
+
+export default PackageJson;
