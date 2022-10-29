@@ -8,13 +8,17 @@ import {
 	htmlPlugin,
 	HtmlPluginOptions,
 	swcPlugin,
-	SwcPluginOptions
+	SwcPluginOptions,
+	SwcReactOptions
 } from '../../plugins';
 import { getTsCompilerOptions } from '../../env';
 
 interface VanillaConfigEnv extends SwcPluginOptions, HtmlPluginOptions, DevServerOptions {}
 
-interface CreateVanillaConfigOptions extends Partial<HtmlPluginOptions>, Partial<DevServerOptions> {
+interface CreateVanillaConfigOptions
+	extends Partial<HtmlPluginOptions>,
+		Partial<DevServerOptions>,
+		Partial<SwcReactOptions> {
 	tsConfigPath?: string;
 	entryPath?: string;
 	outPath?: string;
@@ -26,18 +30,22 @@ function createVanillaAppConfig(
 ): (env: Record<string, string>, argv: Record<string, string>) => Configuration {
 	return (env, argv) => {
 		const {
-			entryPath = path.resolve('src', 'index.ts'),
+			entryPath = path.resolve('src', 'index.tsx'),
 			outPath = path.resolve('build'),
 			tsConfigPath = path.resolve('./tsconfig.json'),
 			publicUrl = '/',
 			indexHtmlPath = path.resolve('public', 'index.html'),
 			useHttps = false,
 			devServerPort = 3000,
-			customize
+			customize,
+			fastRefresh
 		} = options;
 
 		const builder = new WebpackConfigBuilder<VanillaConfigEnv>({
 			compilerOptions: getTsCompilerOptions(tsConfigPath),
+			reactOptions: {
+				fastRefresh
+			},
 			publicUrl,
 			indexHtmlPath,
 			useHttps,

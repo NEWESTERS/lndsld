@@ -433,6 +433,11 @@
       "packageName": "vanilla-app",
       "projectFolder": "examples/vanilla-app",
       "shouldPublish": false
+    },
+    {
+      "packageName": "react-app",
+      "projectFolder": "examples/react-app",
+      "shouldPublish": false
     }
     // {
     //   /**

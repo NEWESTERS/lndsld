@@ -1,10 +1,15 @@
 import { WebpackConfigBuilderPlugin } from '@lndsld/config-builders';
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 
 import { TsCompilerOptions } from '../types';
 
+export interface SwcReactOptions {
+	fastRefresh?: boolean;
+}
+
 export interface SwcPluginOptions {
 	compilerOptions: TsCompilerOptions;
-	useReact: boolean;
+	reactOptions?: SwcReactOptions;
 }
 
 const TS_REGEX = /\.(t|j)sx?$/;
@@ -12,13 +17,22 @@ const TS_REGEX = /\.(t|j)sx?$/;
 const swcPlugin: WebpackConfigBuilderPlugin<SwcPluginOptions> = (builder) => {
 	const {
 		compilerOptions: { experimentalDecorators, jsx, emitDecoratorMetadata },
-		useReact
+		reactOptions
 	} = builder.env;
+
+	builder.merge({
+		resolve: {
+			modules: ['node_modules'],
+			extensions: ['.tsx', '.ts', '.js', '.jsx']
+		}
+	});
+
+	const useReact = reactOptions !== undefined;
 
 	const react = useReact
 		? {
 				runtime: jsx === 'react-jsx' ? 'automatic' : 'classic',
-				refresh: true
+				refresh: reactOptions?.fastRefresh
 		  }
 		: undefined;
 
@@ -42,6 +56,10 @@ const swcPlugin: WebpackConfigBuilderPlugin<SwcPluginOptions> = (builder) => {
 			}
 		}
 	});
+
+	if (reactOptions?.fastRefresh) {
+		builder.addPlugin(new ReactRefreshWebpackPlugin({ overlay: false }));
+	}
 };
 
 export default swcPlugin;
