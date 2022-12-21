@@ -1,0 +1,14 @@
+{
+    "extends": "@lndsld/heft-library-rig/profiles/default/tsconfig.json",
+    "compilerOptions": {
+        "module": "ESNext",
+        "outDir": "lib/esm",
+        "target": "ES2015",
+        "declarationDir": "temp/types",
+        "types": ["heft-jest", "node"],
+        "skipLibCheck": true,
+        "esModuleInterop": true
+    },
+    "include": ["src"],
+    "exclude": ["**/*.test-d.ts"]
+}

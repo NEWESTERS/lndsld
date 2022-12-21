@@ -1,0 +1,33 @@
+{
+  "name": "@lndsld/orc",
+  "version": "0.0.1",
+  "bin": {
+    "orc": "bin/orc.js"
+  },
+  "main": "lib/commonjs/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/orc.d.ts",
+  "scripts": {
+    "build": "heft build",
+    "test": "heft test"
+  },
+  "dependencies": {
+    "chalk": "~4.1.2",
+    "yargs": "~17.6.2"
+  },
+  "devDependencies": {
+    "@lndsld/eslint-config": "workspace:*",
+    "@lndsld/heft-library-rig": "workspace:*",
+    "@rushstack/heft": "~0.45.8",
+    "@types/react": "~17.0.50",
+    "@types/heft-jest": "~1.0.3",
+    "eslint": "~8.12.0",
+    "@types/node": "~18.11.9",
+    "ts-node": "~10.9.1",
+    "typescript": "~4.7.4",
+    "@types/yargs": "17.0.13"
+  },
+  "engines": {
+    "node": ">= 14.18.0"
+  }
+}
