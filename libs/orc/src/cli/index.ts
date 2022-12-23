@@ -26,4 +26,4 @@ const orchestrator = new Orchestrator({ dependencyProvider: orcConfig, taskRunne
 
 const orcCli = new OrcCli({ runner: orchestrator });
 
-orcCli.start(process.argv).catch((error) => console.error(error));
+orcCli.start(process.argv, process.env).catch((error) => console.error(error));

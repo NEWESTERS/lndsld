@@ -24,7 +24,7 @@ export class OrcCli {
 		this._runner = runner;
 	}
 
-	private get _runCommand(): CommandModule {
+	private _getRunCommand(environment: NodeJS.ProcessEnv): CommandModule {
 		return {
 			command: 'run [scriptName]',
 			describe: 'Run script',
@@ -34,7 +34,7 @@ export class OrcCli {
 
 				const startTime = performance.now();
 
-				await this._runner.run(argv.scriptName as string);
+				await this._runner.run(argv.scriptName as string, { env: environment });
 
 				const endTime = performance.now();
 
@@ -43,7 +43,7 @@ export class OrcCli {
 		};
 	}
 
-	public async start(argv: string[]): Promise<void> {
-		await yargs(argv.slice(2)).scriptName('orc').command(this._runCommand).help().argv;
+	public async start(argv: string[], environment: NodeJS.ProcessEnv): Promise<void> {
+		await yargs(argv.slice(2)).scriptName('orc').command(this._getRunCommand(environment)).help().argv;
 	}
 }

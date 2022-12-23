@@ -2,7 +2,7 @@ import { IDependencyProvider, ITaskRunner, TaskRunOptions } from '../../interfac
 
 /**
  * Options to create {@link Orchestrator}.
- * 
+ *
  * @public
  */
 export interface OrchestratorOptions {
@@ -51,7 +51,7 @@ export class Orchestrator implements ITaskRunner {
 	 * @returns `Promise` that resolves when script is finished
 	 */
 	public async run(taskName: string, options?: TaskRunOptions): Promise<void> {
-		await this._runScriptDependencies(taskName);
+		await this._runScriptDependencies(taskName, options);
 
 		await this._runUniqueScript(taskName, options);
 	}
