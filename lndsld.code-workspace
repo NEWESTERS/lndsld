@@ -37,6 +37,10 @@
 			"path": "configs/heft-library-rig",
 		},
 		{
+			"name": "🏗 @lndsld/orc",
+			"path": "libs/orc",
+		},
+		{
 			"name": "🎲 examples",
 			"path": "examples",
 		},

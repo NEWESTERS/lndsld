@@ -438,6 +438,16 @@
       "packageName": "react-app",
       "projectFolder": "examples/react-app",
       "shouldPublish": false
+    },
+    {
+      "packageName": "@lndsld/orc",
+      "projectFolder": "libs/orc",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "ts-lib",
+      "projectFolder": "examples/ts-lib",
+      "shouldPublish": false
     }
     // {
     //   /**
