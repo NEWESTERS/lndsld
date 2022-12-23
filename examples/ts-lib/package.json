@@ -2,7 +2,7 @@
   "name": "ts-lib",
   "version": "1.0.0",
   "scripts": {
-    "build": "",
+    "build": "orc run build:all",
     "build:cjs": "tsc -p config/tsconfig.cjs.json",
     "build:esm": "tsc -p config/tsconfig.esm.json",
     "build:types": "tsc -p config/tsconfig.types.json",
@@ -17,7 +17,8 @@
       "generate:docs": {
         "dependsOn": ["bundle:types"]
       },
-      "build": {
+      "build:all": {
+        "command": "",
         "dependsOn": ["generate:docs", "build:cjs", "build:esm", "bundle:types"]
       }
     }

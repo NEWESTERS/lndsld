@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@lndsld/orc",
+      "comment": "Blocking bug fixed",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@lndsld/orc"
+}

@@ -1,6 +1,6 @@
 /**
  * Options of {@link ITaskRunner}.
- * 
+ *
  * @public
  */
 export interface TaskRunOptions {
@@ -11,12 +11,12 @@ export interface TaskRunOptions {
 	 */
 	cwd?: string;
 	/** Environment variables for task execution. */
-	env?: Record<string, string>
+	env?: NodeJS.ProcessEnv;
 }
 
 /**
  * Definition of service, that can run task with specified name.
- * 
+ *
  * @public
  */
 export interface ITaskRunner {

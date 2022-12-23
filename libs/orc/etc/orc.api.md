@@ -4,6 +4,8 @@
 
 ```ts
 
+/// <reference types="node" />
+
 // @public
 export class FilesystemFinder implements IPathFinder {
     // (undocumented)
@@ -53,7 +55,7 @@ export class JsonFileReader implements IReader {
 export class OrcCli {
     constructor({ runner }: OrcCliOptions);
     // (undocumented)
-    start(argv: string[]): Promise<void>;
+    start(argv: string[], environment: NodeJS.ProcessEnv): Promise<void>;
 }
 
 // @public
@@ -165,7 +167,7 @@ export interface ShellRunnerOptions {
 // @public
 export interface TaskRunOptions {
     cwd?: string;
-    env?: Record<string, string>;
+    env?: NodeJS.ProcessEnv;
 }
 
 // (No @packageDocumentation comment for this package)

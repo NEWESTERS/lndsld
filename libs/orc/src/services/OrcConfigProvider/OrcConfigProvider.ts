@@ -52,6 +52,8 @@ export class OrcConfigProvider
 				command: npmScript
 			};
 		}
+
+		return task;
 	}
 
 	public getDependencies(taskName: string): string[] {
