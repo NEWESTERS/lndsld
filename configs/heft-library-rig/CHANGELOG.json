@@ -2,6 +2,21 @@
   "name": "@lndsld/heft-library-rig",
   "entries": [
     {
+      "version": "0.1.1",
+      "tag": "@lndsld/heft-library-rig_v0.1.1",
+      "date": "Fri, 23 Dec 2022 14:47:39 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Added CLI test coverage reporting"
+          },
+          {
+            "comment": "`jest-environment-jsdom` version downgrade"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.1.0",
       "tag": "@lndsld/heft-library-rig_v0.1.0",
       "date": "Sun, 26 Jun 2022 20:55:06 GMT",

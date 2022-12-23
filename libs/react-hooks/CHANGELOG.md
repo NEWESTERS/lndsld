@@ -1,6 +1,13 @@
 # Change Log - @lndsld/react-hooks
 
-This log was last generated on Tue, 05 Jul 2022 20:30:37 GMT and should not be manually modified.
+This log was last generated on Fri, 23 Dec 2022 14:47:39 GMT and should not be manually modified.
+
+## 0.4.1
+Fri, 23 Dec 2022 14:47:39 GMT
+
+### Patches
+
+- useScroll defaut listener changed to document
 
 ## 0.4.0
 Tue, 05 Jul 2022 20:30:37 GMT

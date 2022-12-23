@@ -1,0 +1,28 @@
+{
+  "name": "@lndsld/webpack-config",
+  "entries": [
+    {
+      "version": "0.1.0",
+      "tag": "@lndsld/webpack-config_v0.1.0",
+      "date": "Fri, 23 Dec 2022 14:47:39 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Implemented react app config factory"
+          },
+          {
+            "comment": "Implemented vanilla app config factory"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@lndsld/config-builders\" to `0.2.1`"
+          },
+          {
+            "comment": "Updating dependency \"@lndsld/eslint-config\" to `0.2.0`"
+          }
+        ]
+      }
+    }
+  ]
+}

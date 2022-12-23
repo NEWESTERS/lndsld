@@ -1,0 +1,25 @@
+{
+  "name": "@lndsld/orc",
+  "entries": [
+    {
+      "version": "0.0.1",
+      "tag": "@lndsld/orc_v0.0.1",
+      "date": "Fri, 23 Dec 2022 14:47:39 GMT",
+      "comments": {
+        "none": [
+          {
+            "comment": "Initial release"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@lndsld/eslint-config\" to `0.2.0`"
+          },
+          {
+            "comment": "Updating dependency \"@lndsld/heft-library-rig\" to `0.1.1`"
+          }
+        ]
+      }
+    }
+  ]
+}

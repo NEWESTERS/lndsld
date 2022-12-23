@@ -2,6 +2,18 @@
   "name": "@lndsld/eslint-config",
   "entries": [
     {
+      "version": "0.2.0",
+      "tag": "@lndsld/eslint-config_v0.2.0",
+      "date": "Fri, 23 Dec 2022 14:47:39 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Added packlets mixin"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.1.1",
       "tag": "@lndsld/eslint-config_v0.1.1",
       "date": "Sat, 18 Jun 2022 21:51:32 GMT",

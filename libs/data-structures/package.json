@@ -1,6 +1,6 @@
 {
   "name": "@lndsld/data-structures",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "",
   "main": "lib/commonjs/index.js",
   "module": "lib/esm/index.js",

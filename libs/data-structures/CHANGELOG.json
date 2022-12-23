@@ -2,6 +2,24 @@
   "name": "@lndsld/data-structures",
   "entries": [
     {
+      "version": "0.3.1",
+      "tag": "@lndsld/data-structures_v0.3.1",
+      "date": "Fri, 23 Dec 2022 14:47:39 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@lndsld/fp\" to `0.3.0`"
+          },
+          {
+            "comment": "Updating dependency \"@lndsld/eslint-config\" to `0.2.0`"
+          },
+          {
+            "comment": "Updating dependency \"@lndsld/heft-library-rig\" to `0.1.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.3.0",
       "tag": "@lndsld/data-structures_v0.3.0",
       "date": "Tue, 05 Jul 2022 20:30:37 GMT",

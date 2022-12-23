@@ -2,6 +2,29 @@
   "name": "@lndsld/math",
   "entries": [
     {
+      "version": "0.2.1",
+      "tag": "@lndsld/math_v0.2.1",
+      "date": "Fri, 23 Dec 2022 14:47:39 GMT",
+      "comments": {
+        "none": [
+          {
+            "comment": "Fixed api-extractor warnings"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@lndsld/fp\" to `0.3.0`"
+          },
+          {
+            "comment": "Updating dependency \"@lndsld/eslint-config\" to `0.2.0`"
+          },
+          {
+            "comment": "Updating dependency \"@lndsld/heft-library-rig\" to `0.1.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.2.0",
       "tag": "@lndsld/math_v0.2.0",
       "date": "Sun, 26 Jun 2022 20:55:06 GMT",

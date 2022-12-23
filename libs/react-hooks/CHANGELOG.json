@@ -2,6 +2,40 @@
   "name": "@lndsld/react-hooks",
   "entries": [
     {
+      "version": "0.4.1",
+      "tag": "@lndsld/react-hooks_v0.4.1",
+      "date": "Fri, 23 Dec 2022 14:47:39 GMT",
+      "comments": {
+        "none": [
+          {
+            "comment": "Fixed api-extractor warnings"
+          },
+          {
+            "comment": "Configured and added tests for hooks"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "useScroll defaut listener changed to document"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@lndsld/fp\" to `0.3.0`"
+          },
+          {
+            "comment": "Updating dependency \"@lndsld/math\" to `0.2.1`"
+          },
+          {
+            "comment": "Updating dependency \"@lndsld/eslint-config\" to `0.2.0`"
+          },
+          {
+            "comment": "Updating dependency \"@lndsld/heft-library-rig\" to `0.1.1`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.4.0",
       "tag": "@lndsld/react-hooks_v0.4.0",
       "date": "Tue, 05 Jul 2022 20:30:37 GMT",
